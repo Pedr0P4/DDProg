@@ -2,11 +2,22 @@
 <html>
     <head>
         <title>Info for Pedro Paulo</title>
+        <style>
+            body{background-color: lightblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+            h1{color:green; background-color: aliceblue; text-align: center;}
+            h2{font-size: 4vw;}
+            p{background-color: lightgray;}
+            p::first-letter{color: red; font-weight: bold;}
+
+            #thisisspecial{background-color: rgb(222,157,210);}
+            .myclass{color: blue; text-align: center;}
+            ::selection{background-color: lightgreen;}
+        </style>
     </head>
     <body>
         <h1>Student Information</h1>
-        <h2>Pedro Paulo Galvão</h2>
-        <p>Graduating at Universidade Federal do Rio Grande do Norte (UFRN)</p>
+        <h2 class="myclass">Pedro Paulo Galvão</h2>
+        <p id="thisisspecial" class="myclass">Graduating at Universidade Federal do Rio Grande do Norte (UFRN)</p>
         <img src="sleeping_cat.jpg" height="100" title="A cat sleeping" alt="A sleepy cat taking a nap after studying">
         <p>Information Technology and Software Engineering</p>
         <p>Started: 2022.1; Actually: 2024.2.</p>
