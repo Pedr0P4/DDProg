@@ -13,6 +13,31 @@
         </style>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="firstwebpage.html">First page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="secondwebpage.html">Second page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.stmartin.edu/">Saint Martin's University</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.w3schools.com/">W3Schools</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <h1>Register a new account</h1>
         <form action="#" method="post">
             <label for="user">Username: </label>
@@ -36,14 +61,7 @@
         <br>
         <button id="ldmode" onclick="ToggleLigthAndDark()">Dark mode</button>
 
-        <script>
-            var isLight = true;
-            function ToggleLigthAndDark(){
-                document.body.classList.toggle("my-dark-mode");
-                isLight = !isLight;
-                if(isLight) document.getElementById("ldmode").innerHTML = "Dark mode";
-                else document.getElementById("ldmode").innerHTML = "Light mode";
-            }
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="myScript.js"></script>
     </body>
 </html>
