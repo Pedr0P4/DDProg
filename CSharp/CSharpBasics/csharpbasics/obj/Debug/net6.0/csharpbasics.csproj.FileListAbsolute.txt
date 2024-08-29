@@ -1,0 +1,15 @@
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\bin\Debug\net6.0\csharpbasics.exe
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\bin\Debug\net6.0\csharpbasics.deps.json
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\bin\Debug\net6.0\csharpbasics.runtimeconfig.json
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\bin\Debug\net6.0\csharpbasics.dll
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\bin\Debug\net6.0\csharpbasics.pdb
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.AssemblyInfoInputs.cache
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.AssemblyInfo.cs
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.csproj.CoreCompileInputs.cache
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.sourcelink.json
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.dll
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\refint\csharpbasics.dll
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.pdb
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\csharpbasics.genruntimeconfig.cache
+C:\Users\SUPORTE\Documents\DDProg\CSharp\csharpbasics\csharpbasics\obj\Debug\net6.0\ref\csharpbasics.dll
