@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\CSharpBasics\\csharpbasics\\csharpbasics.csproj": {}
+    "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\csharpbasics\\csharpbasics\\csharpbasics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\CSharpBasics\\csharpbasics\\csharpbasics.csproj": {
+    "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\csharpbasics\\csharpbasics\\csharpbasics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\CSharpBasics\\csharpbasics\\csharpbasics.csproj",
+        "projectUniqueName": "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\csharpbasics\\csharpbasics\\csharpbasics.csproj",
         "projectName": "csharpbasics",
-        "projectPath": "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\CSharpBasics\\csharpbasics\\csharpbasics.csproj",
+        "projectPath": "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\csharpbasics\\csharpbasics\\csharpbasics.csproj",
         "packagesPath": "C:\\Users\\SUPORTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\csharpbasics\\csharpbasics\\obj\\",
+        "outputPath": "C:\\Users\\SUPORTE\\Documents\\DDProg\\CSharp\\CSharpBasics\\csharpbasics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SUPORTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
