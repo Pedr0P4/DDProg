@@ -25,9 +25,15 @@ controla_player = function()
 	//Fazendo a movimentação vertical
 	var _velv = (_baixo - _cima) * vel;
 	
-	//Incrementando nos eixos
+	//Incrementando no eixo x
 	x += _velh;
+	//Impedindo o player de sair pela esquerda e direita
+	x = clamp(x, sprite_width/2, room_width-(sprite_width/2));
+	
+	//Incrementando no eixo y
 	y += _velv;
+	//Impedindo o player de sair por cima ou por baixo
+	y = clamp(y, sprite_height/2, room_height-(sprite_height/2))
 	
 	//Diminuindo o timer do tiro
 	timer_tiro--;
