@@ -1,13 +1,22 @@
 #region Variáveis
 //Iniciando as variáveis
 vel = 2;
+
+//Vidas
+vidas = 3;
+//Escudos
+escudos = 3;
+
 //Variável da espera do tiro
 espera_tiro = 10;
 //Variável do timer do tiro
 timer_tiro = 0;
+
+//Level do tiro
+level_tiro = 1;
 #endregion
 
-#region Movimentação
+#region Métodos
 //Sistema de movimentação do player
 //Método de controlar o player
 controla_player = function()
@@ -39,15 +48,72 @@ controla_player = function()
 	timer_tiro--;
 	
 	//Se apertei a tecla do tiro E se o timer do tiro está zerado
-	if(_atirar and timer_tiro <= 0){
+	if(_atirar and timer_tiro <= 0)
+	{
+		//Chamada do método do tiro de acordo com o level dele.
+		if(level_tiro == 1)			tiro_1();
+		else if(level_tiro == 2)	tiro_2();
+		else if(level_tiro == 3)	tiro_3();
+		
 		//Diminuindo o timer do tiro
 		timer_tiro = espera_tiro;
-		
-		//Criando tiro
-		var _tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_player);
-		
-		//Definindo as propriedades do tiro
-		_tiro.vspeed = -8;
 	}
+}
+
+//Criando o método do tiro 1
+tiro_1 = function()
+{
+	//Criando o tiro
+	var _tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_player);
+	//Definindo as propriedades do tiro
+	_tiro.vspeed = -8;
+}
+
+//Criando o método do tiro 2
+tiro_2 = function()
+{
+	//Criando o tiro da esquerda
+	var _tiro1 = instance_create_layer(x - sprite_width/4, y, "Projeteis", obj_tiro_player);
+	_tiro1.vspeed = -8;
+	
+	//Criando o tiro da direita
+	_tiro1 = instance_create_layer(x + sprite_width/4, y, "Projeteis", obj_tiro_player);
+	_tiro1.vspeed = -8;
+}
+
+//Criando o método do tiro 3
+tiro_3 = function()
+{
+	tiro_1();
+	tiro_2();
+}
+
+//Método de ganhar level do tiro
+ganha_level_tiro = function()
+{
+	//Aumenta o level se ele for menor de 3
+	if(level_tiro < 3) level_tiro++;
+}
+
+//Método para desenhar ícone
+desenha_icone = function(_spr = spr_vida_player, _reps = 1, _y = 20)
+{
+	//Espaço entre os ícones
+	var _gap = 0;
+
+	repeat(_reps)
+	{	
+		//Desenhando o ícone de vida no canto inferior esquerdo da tela
+		draw_sprite_ext(_spr, 0, 20+_gap, _y, 1, 1, 0, c_white, 0.6);
+		//Aumentando o gap (Espaço entre os ícones);
+		_gap += 30;
+	}
+}
+
+//Método para perder vida
+perde_vida = function()
+{
+	if(vidas > 1) vidas--;
+	else instance_destroy();
 }
 #endregion
