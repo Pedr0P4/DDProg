@@ -7,6 +7,13 @@ vidas = 3;
 //Escudos
 escudos = 3;
 
+//Variável do escudo do player
+player_escudo = noone;
+
+//Invencibilidade
+tempo_invencivel = game_get_speed(gamespeed_fps);
+timer_invencivel = 0;
+
 //Variável da espera do tiro
 espera_tiro = 10;
 //Variável do timer do tiro
@@ -21,6 +28,9 @@ level_tiro = 1;
 //Método de controlar o player
 controla_player = function()
 {
+	//Diminuindo o timer de invencibilidade se ele for maior que 0
+	if(timer_invencivel > 0) timer_invencivel--;
+	
 	//Pegando as teclas
 	var _cima, _baixo, _esqu, _dire, _atirar;
 	_cima	= keyboard_check(ord("W")) or keyboard_check(vk_up);
@@ -44,8 +54,8 @@ controla_player = function()
 	//Impedindo o player de sair por cima ou por baixo
 	y = clamp(y, sprite_height/2, room_height-(sprite_height/2))
 	
-	//Diminuindo o timer do tiro
-	timer_tiro--;
+	//Diminuindo o timer do tiro se ele for maior que 0
+	if(timer_tiro > 0) timer_tiro--;
 	
 	//Se apertei a tecla do tiro E se o timer do tiro está zerado
 	if(_atirar and timer_tiro <= 0)
@@ -113,7 +123,25 @@ desenha_icone = function(_spr = spr_vida_player, _reps = 1, _y = 20)
 //Método para perder vida
 perde_vida = function()
 {
-	if(vidas > 1) vidas--;
+	if(timer_invencivel > 0) return;
+	
+	if(vidas > 1)
+	{
+		vidas--;
+		timer_invencivel = tempo_invencivel;
+	}
 	else instance_destroy();
+}
+
+//Método para usar escudo
+usa_escudo = function()
+{
+	//Se o player tiver escudos e não existir um escudo nele
+	if(escudos > 0 and player_escudo == noone)
+	{
+		//Perde um escudo e desenha ele na posição do player
+		escudos--;
+		player_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
+	}
 }
 #endregion
