@@ -1,0 +1,2 @@
+//Destrói o tiro
+destruir();

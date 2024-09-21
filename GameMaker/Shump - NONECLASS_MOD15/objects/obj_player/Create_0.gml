@@ -32,12 +32,13 @@ controla_player = function()
 	if(timer_invencivel > 0) timer_invencivel--;
 	
 	//Pegando as teclas
-	var _cima, _baixo, _esqu, _dire, _atirar;
+	var _cima, _baixo, _esqu, _dire, _atirar, _escudo;
 	_cima	= keyboard_check(ord("W")) or keyboard_check(vk_up);
 	_baixo	= keyboard_check(ord("S")) or keyboard_check(vk_down);
 	_esqu	= keyboard_check(ord("A")) or keyboard_check(vk_left);
 	_dire	= keyboard_check(ord("D")) or keyboard_check(vk_right);
 	_atirar = keyboard_check(vk_space) or mouse_check_button(mb_left);
+	_escudo = keyboard_check_pressed(ord("E"));
 	
 	//Fazendo a movimentação horizontal
 	var _velh = (_dire - _esqu) * vel;
@@ -53,6 +54,11 @@ controla_player = function()
 	y += _velv;
 	//Impedindo o player de sair por cima ou por baixo
 	y = clamp(y, sprite_height/2, room_height-(sprite_height/2))
+	
+	//Escudo
+	if(keyboard_check_pressed(ord("E"))) usa_escudo();
+	//Para fazer as verificações se há escudo
+	com_escudo()
 	
 	//Diminuindo o timer do tiro se ele for maior que 0
 	if(timer_tiro > 0) timer_tiro--;
@@ -143,5 +149,24 @@ usa_escudo = function()
 		escudos--;
 		player_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
 	}
+}
+
+//Método para fazer o controle do escudo
+com_escudo = function()
+{
+	//Se existir um escudo (player_escudo)
+	if(instance_exists(player_escudo))
+	{
+		//O escudo segue a posição do player
+		player_escudo.x = x;
+		player_escudo.y = y;
+	
+		//Deixa o player invencível
+		timer_invencivel = tempo_invencivel;
+	}
+	else
+	{
+		player_escudo = noone;	
+	}	
 }
 #endregion

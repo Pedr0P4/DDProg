@@ -1,7 +1,5 @@
-//Se destrói
-instance_destroy();
-//Cria partícula
-instance_create_layer(x, y, "Particulas", obj_part_tiro);
+//Destrói o tiro
+destruir();
 
 //Dá dano no player.
 other.perde_vida();
