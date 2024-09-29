@@ -11,7 +11,7 @@ global.debug = false;
 //Método para a destruição do objeto
 function se_destruir(_particula = obj_part_tiro)
 {
-	instance_destroy()
+	instance_destroy();
 	//Cria uma partícula ao se destruir
 	instance_create_layer(x, y, "Particulas", _particula);
 }

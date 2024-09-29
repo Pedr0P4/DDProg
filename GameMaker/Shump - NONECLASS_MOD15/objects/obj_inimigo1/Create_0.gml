@@ -12,7 +12,7 @@ atirar = function()
 	_tiro.vspeed = 4;
 }
 
-morrer = function()
+morrendo = function()
 {
 	se_destruir(obj_part_inim);
 	

@@ -40,6 +40,7 @@
   "resources":[
     {"id":{"name":"obj_escudo","path":"objects/obj_escudo/obj_escudo.yy",},},
     {"id":{"name":"obj_inimigo1","path":"objects/obj_inimigo1/obj_inimigo1.yy",},},
+    {"id":{"name":"obj_inimigo3","path":"objects/obj_inimigo3/obj_inimigo3.yy",},},
     {"id":{"name":"obj_ondas","path":"objects/obj_ondas/obj_ondas.yy",},},
     {"id":{"name":"obj_part_inim","path":"objects/obj_part_inim/obj_part_inim.yy",},},
     {"id":{"name":"obj_part_pu","path":"objects/obj_part_pu/obj_part_pu.yy",},},
