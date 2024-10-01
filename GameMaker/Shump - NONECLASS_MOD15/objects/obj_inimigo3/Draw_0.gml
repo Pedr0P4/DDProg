@@ -1,4 +1,4 @@
 //Se desenha
 draw_self();
 
-if(global.debug) draw_text(x, y-10, vida_inim);
+if(global.debug) draw_text(x, y-10, estado);
