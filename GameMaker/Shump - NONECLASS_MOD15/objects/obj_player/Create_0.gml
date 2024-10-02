@@ -136,7 +136,11 @@ perde_vida = function()
 		vidas--;
 		timer_invencivel = tempo_invencivel;
 	}
-	else instance_destroy();
+	else
+	{
+		instance_destroy();
+		tremer_tela(30);
+	}
 }
 
 //Método para usar escudo

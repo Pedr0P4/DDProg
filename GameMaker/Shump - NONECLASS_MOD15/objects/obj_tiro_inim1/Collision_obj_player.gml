@@ -3,3 +3,5 @@ se_destruir(obj_part_tiro);
 
 //Dá dano no player.
 other.perde_vida();
+
+tremer_tela(10);

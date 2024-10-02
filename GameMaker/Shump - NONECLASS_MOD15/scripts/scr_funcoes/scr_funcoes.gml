@@ -16,4 +16,17 @@ function se_destruir(_particula = obj_part_tiro)
 	instance_create_layer(x, y, "Particulas", _particula);
 }
 
+function tremer_tela(_grau = 0)
+{
+	if(instance_exists(obj_screenshake))
+	{
+		with(obj_screenshake) if(grau < _grau) grau = _grau;	
+	}
+	else
+	{
+		var _screenshake = instance_create_layer(0, 0, "Controladores", obj_screenshake);
+		_screenshake.grau = _grau;
+	}
+}
+
 #endregion
