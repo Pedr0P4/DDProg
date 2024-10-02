@@ -21,6 +21,10 @@ timer_tiro = 0;
 
 //Level do tiro
 level_tiro = 1;
+
+//Escalas do player
+xscale = 1;
+yscale = 1;
 #endregion
 
 #region Métodos
@@ -66,6 +70,9 @@ controla_player = function()
 	//Se apertei a tecla do tiro E se o timer do tiro está zerado
 	if(_atirar and timer_tiro <= 0)
 	{
+		xscale = 1.5;
+		yscale = .8;
+	
 		//Chamada do método do tiro de acordo com o level dele.
 		if(level_tiro == 1)			tiro_1();
 		else if(level_tiro == 2)	tiro_2();
@@ -82,7 +89,7 @@ tiro_1 = function()
 	//Criando o tiro
 	var _tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_player);
 	//Definindo as propriedades do tiro
-	_tiro.vspeed = -8;
+	//_tiro.vspeed = -8;
 }
 
 //Criando o método do tiro 2
@@ -90,11 +97,11 @@ tiro_2 = function()
 {
 	//Criando o tiro da esquerda
 	var _tiro1 = instance_create_layer(x - sprite_width/4, y, "Projeteis", obj_tiro_player);
-	_tiro1.vspeed = -8;
+	//_tiro1.vspeed = -8;
 	
 	//Criando o tiro da direita
 	_tiro1 = instance_create_layer(x + sprite_width/4, y, "Projeteis", obj_tiro_player);
-	_tiro1.vspeed = -8;
+	//_tiro1.vspeed = -8;
 }
 
 //Criando o método do tiro 3
