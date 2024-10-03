@@ -11,6 +11,9 @@ contagem = 0;
 
 direcao_escolhida = false;
 
+inicia_efeito_mola()
+inicia_efeito_branco()
+
 //Método de controle da máquina de estados (state machine)
 maquina_de_estados = function()
 {

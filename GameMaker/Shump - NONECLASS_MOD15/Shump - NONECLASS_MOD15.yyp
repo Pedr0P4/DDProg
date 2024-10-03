@@ -60,6 +60,7 @@
     {"id":{"name":"sq_onda1b","path":"sequences/sq_onda1b/sq_onda1b.yy",},},
     {"id":{"name":"sq_onda2","path":"sequences/sq_onda2/sq_onda2.yy",},},
     {"id":{"name":"sq_onda3","path":"sequences/sq_onda3/sq_onda3.yy",},},
+    {"id":{"name":"sh_branco","path":"shaders/sh_branco/sh_branco.yy",},},
     {"id":{"name":"spr_bg0","path":"sprites/spr_bg0/spr_bg0.yy",},},
     {"id":{"name":"spr_bg1","path":"sprites/spr_bg1/spr_bg1.yy",},},
     {"id":{"name":"spr_bg2","path":"sprites/spr_bg2/spr_bg2.yy",},},

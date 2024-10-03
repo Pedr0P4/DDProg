@@ -23,8 +23,10 @@ timer_tiro = 0;
 level_tiro = 1;
 
 //Escalas do player
-xscale = 1;
-yscale = 1;
+inicia_efeito_mola();
+
+//Inicia a variável para verificar se o player tomou dano
+inicia_efeito_branco();
 #endregion
 
 #region Métodos
@@ -70,8 +72,7 @@ controla_player = function()
 	//Se apertei a tecla do tiro E se o timer do tiro está zerado
 	if(_atirar and timer_tiro <= 0)
 	{
-		xscale = 1.5;
-		yscale = .8;
+		efeito_mola(0.7, 1.4);
 	
 		//Chamada do método do tiro de acordo com o level dele.
 		if(level_tiro == 1)			tiro_1();
@@ -142,6 +143,8 @@ perde_vida = function()
 	{
 		vidas--;
 		timer_invencivel = tempo_invencivel;
+		efeito_mola(1.3, 0.7);
+		timer_efeito_branco(3);
 	}
 	else
 	{
