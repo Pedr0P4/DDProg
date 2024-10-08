@@ -83,7 +83,7 @@ controla_player = function()
 		else if(level_tiro == 3)	tiro_3();
 		
 		//solta o som do tiro
-		inicia_som(sfx_laser1, false, 0.5, 0.15);
+		inicia_som(sfx_laser1, false, global.volume_tiro, 0.15);
 		
 		//Diminuindo o timer do tiro
 		timer_tiro = espera_tiro;
@@ -157,6 +157,7 @@ perde_vida = function()
 		instance_destroy();
 		tremer_tela(30);
 		inicia_som(sfx_lose, 0, 1, 0);
+		instance_create_layer(x, y, "Particulas", obj_explosao_player);
 	}
 }
 
@@ -170,7 +171,7 @@ usa_escudo = function()
 		escudos--;
 		player_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
 		
-		inicia_som(sfx_shieldUp, false, 1, 0);
+		inicia_som(sfx_shieldUp, false, global.volume_escu, 0);
 	}
 }
 

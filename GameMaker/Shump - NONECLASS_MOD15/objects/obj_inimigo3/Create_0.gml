@@ -43,7 +43,7 @@ maquina_de_estados = function()
 				_tiro.speed = 3;
 				_tiro.direction = _dir;
 				_tiro.image_angle = _dir + 90;
-				inicia_som(sfx_zap, false, 1, 0.1);
+				inicia_som(sfx_zap, false, global.volume_tiro, 0.1);
 			}
 			
 			if(contagem < 3) estado = "carregando";
@@ -60,7 +60,7 @@ maquina_de_estados = function()
 				_ang += 15; //Incremento no gap entre os tiros
 			}
 			
-			inicia_som(sfx_laser2, false, 0.7, 0.1);
+			inicia_som(sfx_laser2, false, global.volume_tiro, 0.1);
 			
 			if(contagem < 3) estado = "carregando";
 			else estado = "fugindo"
@@ -88,6 +88,6 @@ morrendo = function()
 	{
 		se_destruir(obj_part_inim);
 		tremer_tela(10);
-		inicia_som(sfx_explosion, false, 0.5, 0.1);
+		inicia_som(sfx_explosion, false, global.volume_expl, 0.1);
 	}
 }

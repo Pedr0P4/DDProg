@@ -11,7 +11,7 @@ atirar = function()
 	//Editando a velocidade vertical do tiro
 	_tiro.vspeed = 4;
 	
-	inicia_som(sfx_laser2, 0, 0.7, 0.1);
+	inicia_som(sfx_laser2, 0, global.volume_tiro, 0.1);
 }
 
 morrendo = function()
@@ -22,5 +22,5 @@ morrendo = function()
 	var _chance = random(100);
 	if(_chance >= 95) instance_create_layer(x, y, "PowerUps", obj_powerup);
 	
-	inicia_som(sfx_explosion, false, 0.5, 0.1);
+	inicia_som(sfx_explosion, false, global.volume_expl, 0.1);
 }

@@ -4,6 +4,10 @@ randomize();
 
 #region Globais
 global.debug = false;
+
+global.volume_tiro = .4;
+global.volume_expl = .3;
+global.volume_escu = .5;
 #endregion
 
 #region Funções Globais
