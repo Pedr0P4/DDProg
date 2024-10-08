@@ -1,3 +1,6 @@
+audio_stop_all();
+audio_play_sound(musica_fundo, 0, true);
+
 #region Variáveis
 //Iniciando as variáveis
 vel = 2;
@@ -79,6 +82,9 @@ controla_player = function()
 		else if(level_tiro == 2)	tiro_2();
 		else if(level_tiro == 3)	tiro_3();
 		
+		//solta o som do tiro
+		inicia_som(sfx_laser1, false, 0.5, 0.15);
+		
 		//Diminuindo o timer do tiro
 		timer_tiro = espera_tiro;
 	}
@@ -150,6 +156,7 @@ perde_vida = function()
 	{
 		instance_destroy();
 		tremer_tela(30);
+		inicia_som(sfx_lose, 0, 1, 0);
 	}
 }
 
@@ -162,6 +169,8 @@ usa_escudo = function()
 		//Perde um escudo e desenha ele na posição do player
 		escudos--;
 		player_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
+		
+		inicia_som(sfx_shieldUp, false, 1, 0);
 	}
 }
 

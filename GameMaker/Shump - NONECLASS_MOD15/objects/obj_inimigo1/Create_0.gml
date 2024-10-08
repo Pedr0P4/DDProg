@@ -10,6 +10,8 @@ atirar = function()
 	var _tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_inim1);
 	//Editando a velocidade vertical do tiro
 	_tiro.vspeed = 4;
+	
+	inicia_som(sfx_laser2, 0, 0.7, 0.1);
 }
 
 morrendo = function()
@@ -19,4 +21,6 @@ morrendo = function()
 	//Define uma chance do inimigo dropar um powerup (5% nesse caso)
 	var _chance = random(100);
 	if(_chance >= 95) instance_create_layer(x, y, "PowerUps", obj_powerup);
+	
+	inicia_som(sfx_explosion, false, 0.5, 0.1);
 }

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bgmusica",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":155.6898,
+  "name":"snd_bgmusica",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bgmusica.mp3",
+  "type":0,
+  "volume":1.0,
+}

@@ -90,4 +90,10 @@ function desenha_efeito_branco(_funcao_desenho = draw_self)
 	}
 }
 
+function inicia_som(_sound, _loop = 1, _volume = 1, _picth_variation = 0.1)
+{
+	var _pitch = random_range(1-_picth_variation, 1+_picth_variation);
+	audio_play_sound(_sound, 0, _loop, _volume, , _pitch);
+}
+
 #endregion
