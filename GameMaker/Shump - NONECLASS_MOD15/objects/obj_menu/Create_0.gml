@@ -24,7 +24,33 @@ controla_menu = function()
 	margem = lerp(margem, 25, 0.1);
 
 	//Limita o valor de atual (min = 0 ; max = tamanho de opcoes_menu - 1)
-	//atual = clamp(atual, 0, _fim_array);	
+	//atual = clamp(atual, 0, _fim_array);
+	
+	if(keyboard_check_pressed(vk_enter))
+	{
+		ativa_menu();	
+	}
+}
+
+ativa_menu = function()
+{
+	switch(atual)
+	{
+		//Jogar
+		case 0:
+		
+		break;
+		
+		//Tutorial
+		case 1:
+		
+		break;
+		
+		//Sair
+		case 2:
+			game_end();
+		break;
+	}
 }
 
 desenha_menu = function()
