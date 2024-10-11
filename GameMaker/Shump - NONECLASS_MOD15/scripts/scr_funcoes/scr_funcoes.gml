@@ -8,6 +8,14 @@ global.debug = false;
 global.volume_tiro = .4;
 global.volume_expl = .3;
 global.volume_escu = .5;
+
+global.destino = rm_inicio;
+
+global.em_transicao = false;
+
+global.pausa_onda = true;
+global.onda_atual = 1;
+global.seq_atual = sq_1;
 #endregion
 
 #region Funções Globais
@@ -98,6 +106,17 @@ function inicia_som(_sound, _loop = 1, _volume = 1, _picth_variation = 0.1)
 {
 	var _pitch = random_range(1-_picth_variation, 1+_picth_variation);
 	audio_play_sound(_sound, 0, _loop, _volume, , _pitch);
+}
+
+function trocar_room()
+{
+	room_goto(global.destino);
+	audio_stop_all();
+}
+
+function para_transicao()
+{
+	global.em_transicao = false;
 }
 
 #endregion

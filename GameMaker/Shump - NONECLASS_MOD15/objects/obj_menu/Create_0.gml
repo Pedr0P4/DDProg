@@ -38,12 +38,16 @@ ativa_menu = function()
 	{
 		//Jogar
 		case 0:
-		
+			layer_sequence_create("Transicao", room_width/2, room_height/2, sq_transicao1);
+			global.destino = rm_jogo;
+			global.em_transicao = true;
 		break;
 		
 		//Tutorial
 		case 1:
-		
+			layer_sequence_create("Transicao", room_width/2, room_height/2, sq_transicao1);
+			global.destino = rm_tutorial;
+			global.em_transicao = true;
 		break;
 		
 		//Sair

@@ -1,1 +1,4 @@
-desenha_menu();
+if(!global.em_transicao)
+{
+	desenha_menu();
+}

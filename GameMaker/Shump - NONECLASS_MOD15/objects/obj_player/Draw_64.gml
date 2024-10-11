@@ -4,6 +4,7 @@ if(global.debug)
 	draw_text(20, 20, "Level do tiro: " + string(level_tiro));
 }
 
+if(global.em_transicao) exit;
 //Altura do display
 var _gui_height = display_get_gui_height();
 

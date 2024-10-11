@@ -158,6 +158,8 @@ perde_vida = function()
 		tremer_tela(30);
 		inicia_som(sfx_lose, 0, 1, 0);
 		instance_create_layer(x, y, "Particulas", obj_explosao_player);
+		layer_sequence_create("Transicao", room_width/2, room_height/2, sq_transicao1);
+		global.em_transicao = true;
 	}
 }
 
