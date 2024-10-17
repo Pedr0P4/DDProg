@@ -41,7 +41,7 @@
   "tracks":[
     {"$GMTextTrack":"","%Name":"fnt_menu","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AssetTextKeyframe>":"","Keyframes":[
           {"$Keyframe<AssetTextKeyframe>":"","Channels":{
-              "0":{"$AssetTextKeyframe":"","Alignment":1,"EnableEffects":false,"EnableGlow":false,"EnableOutline":false,"EnableShadow":false,"Id":null,"resourceType":"AssetTextKeyframe","resourceVersion":"2.0","Text":"WASD move\r\nEspaço atira\r\n\"E\" usa escudo\r\nESC volta","Wrap":false,},
+              "0":{"$AssetTextKeyframe":"","Alignment":1,"EnableEffects":false,"EnableGlow":false,"EnableOutline":false,"EnableShadow":false,"Id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"resourceType":"AssetTextKeyframe","resourceVersion":"2.0","Text":"WASD move\r\nEspaço atira\r\n\"E\" usa escudo\r\nESC volta","Wrap":false,},
             },"Disabled":false,"id":"f8c6e3f6-6f27-4532-88f5-9221a7d30757","IsCreationKey":false,"Key":0.0,"Length":120.0,"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"2.0","Stretch":false,},
         ],"resourceType":"KeyframeStore<AssetTextKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"fnt_menu","resourceType":"GMTextTrack","resourceVersion":"2.0","trackColour":4294068299,"tracks":[
         {"$GMColourTrack":"","%Name":"blend_multiply","builtinName":10,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<ColourKeyframe>":"","Keyframes":[
