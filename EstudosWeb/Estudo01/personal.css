@@ -1,0 +1,21 @@
+body{background-color: lightblue; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+h1{color:green; background-color: aliceblue; text-align: center;}
+
+h2{font-size: 4vw;}
+p{
+    background-color: lightgray;
+    width: 70%;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+p::first-letter{color: red; font-weight: bold;}
+
+#thisisspecial{background-color: rgb(222,157,210);}
+.myclass{color: blue; text-align: center;}
+::selection{background-color: lightgreen;}
+
+.CenterThoseLinks{
+    text-align: center;
+}
