@@ -16,6 +16,8 @@ global.em_transicao = false;
 global.pausa_onda = true;
 global.onda_atual = 1;
 global.seq_atual = sq_1;
+
+global.tirovel = -1;
 #endregion
 
 #region Funções Globais

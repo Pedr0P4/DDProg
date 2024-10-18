@@ -8,8 +8,8 @@
   "name":"obj_part_pu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Particulas",
+    "path":"folders/Objects/Particulas.yy",
   },
   "parentObjectId":null,
   "persistent":false,

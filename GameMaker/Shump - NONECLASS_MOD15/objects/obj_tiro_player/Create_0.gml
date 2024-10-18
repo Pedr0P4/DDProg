@@ -7,4 +7,4 @@ destruir = function()
 image_xscale = 3;
 image_yscale = 2;
 
-vspeed = -1;
+vspeed = global.tirovel;

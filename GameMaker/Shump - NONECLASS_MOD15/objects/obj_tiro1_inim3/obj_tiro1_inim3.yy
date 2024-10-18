@@ -6,8 +6,8 @@
   "name":"obj_tiro1_inim3",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Tiros",
+    "path":"folders/Objects/Tiros.yy",
   },
   "parentObjectId":{
     "name":"obj_tiro_inim1",

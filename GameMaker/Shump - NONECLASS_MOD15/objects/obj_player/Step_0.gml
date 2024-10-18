@@ -8,6 +8,8 @@ retorna_mola(0.35);
 
 contador_efeito_branco();
 
+show_debug_message("Espera do tiro: " + string(espera_tiro));
+
 ////Debug do level do tiro
 //if(keyboard_check_pressed(ord("I"))) level_tiro++;
 //if(keyboard_check_pressed(ord("K"))) level_tiro--;

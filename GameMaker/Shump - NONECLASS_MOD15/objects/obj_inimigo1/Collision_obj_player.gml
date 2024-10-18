@@ -1,4 +1,4 @@
-morrer();
+morrendo();
 
 //Tira a vida do player
 other.perde_vida();

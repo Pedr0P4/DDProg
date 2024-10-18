@@ -1,0 +1,9 @@
+if(sumindo)
+{
+	pulsar();
+	acabando();
+}
+else
+{
+	pulsar();
+}

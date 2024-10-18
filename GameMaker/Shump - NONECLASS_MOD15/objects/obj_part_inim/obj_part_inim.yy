@@ -9,8 +9,8 @@
   "name":"obj_part_inim",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Particulas",
+    "path":"folders/Objects/Particulas.yy",
   },
   "parentObjectId":null,
   "persistent":false,

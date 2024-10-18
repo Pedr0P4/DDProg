@@ -11,8 +11,8 @@
   "name":"obj_tiro_inim1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Tiros",
+    "path":"folders/Objects/Tiros.yy",
   },
   "parentObjectId":null,
   "persistent":false,

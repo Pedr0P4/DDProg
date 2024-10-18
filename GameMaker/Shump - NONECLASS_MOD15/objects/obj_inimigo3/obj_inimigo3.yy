@@ -11,8 +11,8 @@
   "name":"obj_inimigo3",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Naves",
+    "path":"folders/Objects/Naves.yy",
   },
   "parentObjectId":{
     "name":"obj_inimigo1",

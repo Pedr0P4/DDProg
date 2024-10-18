@@ -89,5 +89,11 @@ morrendo = function()
 		se_destruir(obj_part_inim);
 		tremer_tela(10);
 		inicia_som(sfx_explosion, false, global.volume_expl, 0.1);
+		
+		//Define uma chance do inimigo dropar um powerup (5% nesse caso)
+		var _chance = random(100);
+		if(_chance > 99) instance_create_layer(x, y, "PowerUps", choose(obj_powerup, obj_shotspeedup));
+		else if(_chance > 85) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
+		else if(_chance > 90) instance_create_layer(x, y, "PowerUps", obj_velup);
 	}
 }

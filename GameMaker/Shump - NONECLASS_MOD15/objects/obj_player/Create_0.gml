@@ -2,6 +2,8 @@ audio_stop_all();
 audio_play_sound(musica_fundo, 0, true);
 
 #region Variáveis
+global.tirovel = -1;
+
 //Iniciando as variáveis
 vel = 2;
 
@@ -123,6 +125,36 @@ ganha_level_tiro = function()
 {
 	//Aumenta o level se ele for menor de 3
 	if(level_tiro < 3) level_tiro++;
+}
+
+//Método de ganhar vidas
+ganha_vida = function()
+{
+	//Aumenta as vidas
+	if(vidas < 6) vidas++;	
+}
+
+//Método de ganhar escudos
+ganha_escudo = function()
+{
+	//Aumenta os escudos
+	if(escudos < 6) escudos++;
+}
+
+//Método de aumentar a velocidade
+ganha_velocidade = function()
+{
+	//Aumenta a velocidade
+	if(vel < 4) vel += 0.5;
+}
+
+//Método de aumentar a velocidade dos tiros
+ganha_velocidade_tiro = function()
+{
+	//Diminui a espera do tiro	
+	if(espera_tiro > 6) espera_tiro -= 1;
+	//Aumenta a velocidade do tiro
+	if(global.tirovel > -3) global.tirovel -= 0.5;
 }
 
 //Método para desenhar ícone
