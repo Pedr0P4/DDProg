@@ -1,3 +1,5 @@
+/// @description Onda 2
+
 ondas_normais(9);
 
 var _x = irandom_range(32, 256);

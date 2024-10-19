@@ -1,3 +1,5 @@
+/// @description Onda 1
+
 //Sistema de ondas de inimigos convencionais
 ondas_normais(5);
 
