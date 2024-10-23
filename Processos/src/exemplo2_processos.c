@@ -1,7 +1,7 @@
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <sys/wait.h>
 
 int value = 5;
 
