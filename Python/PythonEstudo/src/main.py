@@ -1,15 +1,79 @@
 import tkinter as tk
-from sys import maxsize
 from tkinter import ttk
+import sqlite3
 
 root = tk.Tk()
 
 class Funcs():
     def limpa_tela(self):
-        self.codigo_entry.delete(0, "end")
-        self.nome_entry.delete(0, "end")
-        self.telefone_entry.delete(0, "end")
-        self.cidade_entry.delete(0, "end")
+        self.codigo_entry.delete(0, tk.END)
+        self.nome_entry.delete(0, tk.END)
+        self.telefone_entry.delete(0, tk.END)
+        self.cidade_entry.delete(0, tk.END)
+
+    def conectar_bd(self):
+        self.conn = sqlite3.connect('clientes.db')
+        self.cursor = self.conn.cursor(); print("Conectando ao banco de dados")
+
+    def desconectar_bd(self):
+        self.conn.close(); print("Desconectando ao banco de dados")
+
+    def montar_tabelas(self):
+        self.conectar_bd()
+        ### Criar tabela
+        self.cursor.execute(
+            """
+            CREATE TABLE IF NOT EXISTS clientes (
+                cod INTEGER PRIMARY KEY,
+                nome_cliente CHAR(40) NOT NULL,
+                telefone NUMERIC(20),
+                cidade CHAR(40)
+            );
+            """
+        )
+        self.conn.commit(); print("Banco de dados criado")
+        self.desconectar_bd()
+
+    def entrys(self):
+        self.codigo = self.codigo_entry.get()
+        self.nome = self.nome_entry.get()
+        self.telefone = self.telefone_entry.get()
+        self.cidade = self.cidade_entry.get()
+
+        if (self.telefone == ''):
+            self.telefone = "Não especificado"
+        if (self.cidade == ''):
+            self.cidade = "Não especificado"
+
+    def add_cliente(self):
+        self.entrys()
+        self.conectar_bd()
+        self.cursor.execute("""INSERT INTO clientes(nome_cliente, telefone, cidade)
+            VALUES (?, ?, ?)""", (self.nome, self.telefone, self.cidade))
+        self.conn.commit()
+        self.desconectar_bd()
+        self.select_lista()
+        self.limpa_tela()
+
+    def select_lista(self):
+        self.listaCli.delete(*self.listaCli.get_children())
+        self.conectar_bd()
+        lista = self.cursor.execute("""SELECT cod, nome_cliente, telefone, cidade FROM clientes
+            ORDER BY nome_cliente ASC;""")
+        for i in lista:
+            self.listaCli.insert("", tk.END, values=i)
+        self.desconectar_bd()
+
+    def on_double_click(self):
+        self.limpa_tela()
+        self.listaCli.selection()
+
+        for n in self.listaCli.selection():
+            col1, col2, col3, col4 = self.listaCli.item(n, 'values')
+            self.codigo_entry.insert(tk.END, col1)
+            self.nome_entry.insert(tk.END, col2)
+            self.telefone_entry.insert(tk.END, col3)
+            self.cidade_entry.insert(tk.END, col4)
 
 class Application(Funcs):
     def __init__(self):
@@ -18,6 +82,8 @@ class Application(Funcs):
         self.frames_da_tela()
         self.widgets_frame1()
         self.lista_frame2()
+        self.montar_tabelas()
+        self.select_lista()
         root.mainloop()
 
     def tela(self):
@@ -43,7 +109,7 @@ class Application(Funcs):
         self.bt_buscar = tk.Button(self.frame_1, text="Buscar", bd=0, bg="#32b1e3", fg="white", font=("verdana", 10, "bold"))
         self.bt_buscar.place(relx=0.3, rely=0.1, relwidth=0.1, relheight=0.15)
         ### Criação do botão novo
-        self.bt_novo = tk.Button(self.frame_1, text="Novo", bd=0, bg="#32b1e3", fg="white", font=("verdana", 10, "bold"))
+        self.bt_novo = tk.Button(self.frame_1, text="Novo", bd=0, bg="#32b1e3", fg="white", font=("verdana", 10, "bold"), command=self.add_cliente)
         self.bt_novo.place(relx=0.6, rely=0.1, relwidth=0.1, relheight=0.15)
         ### Criação do botão alterar
         self.bt_alterar = tk.Button(self.frame_1, text="Alterar", bd=0, bg="#32b1e3", fg="white", font=("verdana", 10, "bold"))
