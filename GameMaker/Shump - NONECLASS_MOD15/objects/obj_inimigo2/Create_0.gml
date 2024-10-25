@@ -29,9 +29,11 @@ primeiro_lado = choose("direita", "esquerda")
 if(primeiro_lado == "direita") direita = true;
 else esquerda = true;
 
+vel_giro = 0;
+
 piscadas = 0;
-espera_branco = 10;
-timer_branco = 10;
+espera_cor = 10;
+timer_cor = 10;
 espera_normal = 10;
 timer_normal = 0;
 mudou = false;
@@ -50,7 +52,7 @@ maquina_de_estados = function()
 	switch(estado)
 	{
 		case "Chegando":
-			if(y < 80) vspeed = 3;
+			if(y < 120) vspeed = 3;
 			else
 			{
 				vspeed = 0;
@@ -66,7 +68,7 @@ maquina_de_estados = function()
 				show_debug_message("Carregou!");
 				timer_segue1 = espera_segue1;
 				timer_segue2 = espera_segue2;
-				estado = "Auto-destruir" //choose("Tiro1", "Tiro2");
+				estado = choose("Tiro1", "Tiro2");
 				timer_carregamento = espera_carregamento;
 			}
 			break;
@@ -161,8 +163,7 @@ maquina_de_estados = function()
 					break;
 					
 				case "Auto-destruir":
-					image_angle += 20;
-					
+					image_angle += vel_giro;
 					break;
 	}
 }
@@ -172,18 +173,7 @@ morrendo = function()
 {
 	//Se a vida do inimigo não estiver zerada, perde vida, caso contrário se destrói
 	if(vida_inim > 1) vida_inim--;
-	else 
-	{
-		se_destruir(obj_part_inim);
-		tremer_tela(10);
-		inicia_som(sfx_explosion, false, global.volume_expl, 0.1);
-		
-		//Define uma chance do inimigo dropar um powerup (5% nesse caso)
-		var _chance = random(100);
-		if(_chance > 80) instance_create_layer(x, y, "PowerUps", choose(obj_powerup, obj_shotspeedup));
-		else if(_chance > 75) instance_create_layer(x, y, "PowerUps", obj_velup);
-		else if(_chance > 70) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
-	}
+	else estado = "Auto-destruir";
 }
 
 desviar = function()

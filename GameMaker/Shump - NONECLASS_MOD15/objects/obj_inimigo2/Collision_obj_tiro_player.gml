@@ -1,8 +1,9 @@
-/// @description Inserir descrição aqui
-// Você pode escrever seu código neste editor
+other.destruir();
+morrendo();
 
-// Inherit the parent event
-event_inherited();
-
-timer_efeito_branco(3);
-efeito_mola(1.2, 0.8);
+if(estado != "Auto-destruir")
+{
+	tremer_tela(5);
+	timer_efeito_branco(3);
+	efeito_mola(1.2, 0.8);
+}
