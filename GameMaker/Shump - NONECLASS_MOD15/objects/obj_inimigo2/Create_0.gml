@@ -1,4 +1,4 @@
-vida_inim = 50;
+vida_inim = 25;
 
 espera_carregamento = game_get_speed(gamespeed_fps);
 timer_carregamento = 0;
@@ -22,6 +22,19 @@ estado = "Chegando";
 
 tiro1 = noone;
 tiro2 = noone;
+
+direita = false;
+esquerda = false;
+primeiro_lado = choose("direita", "esquerda")
+if(primeiro_lado == "direita") direita = true;
+else esquerda = true;
+
+piscadas = 0;
+espera_branco = 10;
+timer_branco = 10;
+espera_normal = 10;
+timer_normal = 0;
+mudou = false;
 
 inicia_efeito_mola()
 inicia_efeito_branco()
@@ -53,7 +66,7 @@ maquina_de_estados = function()
 				show_debug_message("Carregou!");
 				timer_segue1 = espera_segue1;
 				timer_segue2 = espera_segue2;
-				estado = choose("Tiro1", "Tiro2");
+				estado = "Auto-destruir" //choose("Tiro1", "Tiro2");
 				timer_carregamento = espera_carregamento;
 			}
 			break;
@@ -146,6 +159,11 @@ maquina_de_estados = function()
 						estado = "Carregando";
 					}
 					break;
+					
+				case "Auto-destruir":
+					image_angle += 20;
+					
+					break;
 	}
 }
 
@@ -165,5 +183,22 @@ morrendo = function()
 		if(_chance > 80) instance_create_layer(x, y, "PowerUps", choose(obj_powerup, obj_shotspeedup));
 		else if(_chance > 75) instance_create_layer(x, y, "PowerUps", obj_velup);
 		else if(_chance > 70) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
+	}
+}
+
+desviar = function()
+{
+	if(direita and x > 65) x = lerp(x, 64, 0.05);
+	else
+	{
+		direita = false;
+		esquerda = true;
+	}
+	
+	if(esquerda and x < room_width-65) x = lerp(x, room_width-64, 0.05);
+	else
+	{
+		direita = true;
+		esquerda = false;
 	}
 }
