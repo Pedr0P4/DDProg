@@ -24,7 +24,13 @@ if(global.pausa_onda)
 		case 5:
 			global.seq_atual = sq_5;
 		break;
+		
+		case 6:
+			room_goto("rm_inicio");
+		break;
 	}
 	
 	cria_sequencia(global.seq_atual);
 }
+
+show_debug_message(contagem);

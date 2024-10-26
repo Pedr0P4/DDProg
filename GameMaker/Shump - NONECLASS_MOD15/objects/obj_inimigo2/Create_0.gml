@@ -38,6 +38,9 @@ espera_normal = 10;
 timer_normal = 0;
 mudou = false;
 
+contador = 0;
+fim_dir = choose(-240, room_width+240);
+
 inicia_efeito_mola()
 inicia_efeito_branco()
 
@@ -70,7 +73,10 @@ maquina_de_estados = function()
 				timer_segue2 = espera_segue2;
 				estado = choose("Tiro1", "Tiro2");
 				timer_carregamento = espera_carregamento;
+				contador++;
 			}
+			
+			if(contador >= 10) estado = "Saindo";
 			break;
 			
 			case "Tiro1":
@@ -164,6 +170,11 @@ maquina_de_estados = function()
 					
 				case "Auto-destruir":
 					image_angle += vel_giro;
+					break;
+					
+				case "Saindo":
+					x = lerp(x, fim_dir, 0.1);
+					if(x < -110 or x > room_width+110) instance_destroy();
 					break;
 	}
 }

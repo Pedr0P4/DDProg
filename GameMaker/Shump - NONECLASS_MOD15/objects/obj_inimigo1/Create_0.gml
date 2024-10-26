@@ -20,9 +20,9 @@ morrendo = function()
 	
 	//Define uma chance do inimigo dropar um powerup (1% nesse caso)
 	var _chance = irandom(100);
-	if(_chance > 95) instance_create_layer(x, y, "PowerUps", choose(obj_powerup, obj_shotspeedup));
-	else if(_chance > 90) instance_create_layer(x, y, "PowerUps", obj_velup);
-	else if(_chance > 85) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
+	if(_chance > 99) instance_create_layer(x, y, "PowerUps", choose(obj_powerup, obj_shotspeedup));
+	else if(_chance > 95) instance_create_layer(x, y, "PowerUps", obj_velup);
+	else if(_chance > 90) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
 	
 	inicia_som(sfx_explosion, false, global.volume_expl, 0.1);
 }
