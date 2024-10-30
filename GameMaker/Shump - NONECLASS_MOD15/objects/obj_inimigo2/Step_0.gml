@@ -11,7 +11,6 @@ if(estado == "Auto-destruir")
 	{
 		timer_cor--;
 		image_blend = c_red;
-		show_debug_message("Vermelho");
 	}
 	else if(!mudou)
 	{
@@ -23,7 +22,6 @@ if(estado == "Auto-destruir")
 	{
 		timer_normal--;
 		image_blend = c_white;
-		show_debug_message("Normal");
 	}
 	else if(mudou)
 	{
@@ -62,6 +60,8 @@ if(estado == "Auto-destruir")
 		else if(_chance > 65) instance_create_layer(x, y, "PowerUps", obj_velup);
 		else if(_chance > 60) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
 		
+		global.pontos += 200;
+		
 		var _dir = 0;
 		var _rep = 16;
 		repeat(_rep)
@@ -74,6 +74,4 @@ if(estado == "Auto-destruir")
 			_dir += _gap;
 		}
 	}
-	
-	show_debug_message(piscadas);
 }

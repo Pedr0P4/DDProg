@@ -9,7 +9,7 @@ retorna_mola(0.35);
 contador_efeito_branco();
 
 ////Debug do level do tiro
-//if(keyboard_check_pressed(ord("I"))) level_tiro++;
+//if(keyboard_check_pressed(ord("I"))) ganha_level_tiro();
 //if(keyboard_check_pressed(ord("K"))) level_tiro--;
 ////Limitando os leveis no level mínimo e máximo
 //level_tiro = clamp(level_tiro, 1, 3);

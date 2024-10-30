@@ -95,5 +95,7 @@ morrendo = function()
 		if(_chance > 90) instance_create_layer(x, y, "PowerUps", choose(obj_powerup, obj_shotspeedup));
 		else if(_chance > 85) instance_create_layer(x, y, "PowerUps", obj_velup);
 		else if(_chance > 80) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
+		
+		global.pontos += 80;
 	}
 }

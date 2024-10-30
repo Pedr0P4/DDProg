@@ -24,5 +24,7 @@ morrendo = function()
 	else if(_chance > 95) instance_create_layer(x, y, "PowerUps", obj_velup);
 	else if(_chance > 90) instance_create_layer(x, y, "PowerUps", choose(obj_lifeup, obj_shieldup));
 	
+	global.pontos += 20;
+	
 	inicia_som(sfx_explosion, false, global.volume_expl, 0.1);
 }

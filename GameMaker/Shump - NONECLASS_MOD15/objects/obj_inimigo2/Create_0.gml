@@ -169,6 +169,7 @@ maquina_de_estados = function()
 					break;
 					
 				case "Auto-destruir":
+					vspeed = 0;
 					image_angle += vel_giro;
 					break;
 					

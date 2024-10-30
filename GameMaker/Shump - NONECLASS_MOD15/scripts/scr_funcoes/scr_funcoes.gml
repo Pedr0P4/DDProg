@@ -18,6 +18,8 @@ global.onda_atual = 1;
 global.seq_atual = sq_1;
 
 global.tirovel = -1;
+
+global.pontos = 0;
 #endregion
 
 #region Funções Globais
@@ -110,9 +112,9 @@ function inicia_som(_sound, _loop = 1, _volume = 1, _picth_variation = 0.1)
 	audio_play_sound(_sound, 0, _loop, _volume, , _pitch);
 }
 
-function trocar_room()
+function trocar_room(_room = global.destino)
 {
-	room_goto(global.destino);
+	room_goto(_room);
 	audio_stop_all();
 }
 

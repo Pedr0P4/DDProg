@@ -83,6 +83,8 @@ controla_player = function()
 		if(level_tiro == 1)			tiro_1();
 		else if(level_tiro == 2)	tiro_2();
 		else if(level_tiro == 3)	tiro_3();
+		else if(level_tiro == 4)	tiro_4();
+		else if(level_tiro == 5)	tiro_5();
 		
 		//solta o som do tiro
 		inicia_som(sfx_laser1, false, global.volume_tiro, 0.15);
@@ -120,11 +122,45 @@ tiro_3 = function()
 	tiro_2();
 }
 
+//Criando o método do tiro 4
+tiro_4 = function()
+{
+	tiro_3();
+	var _pos = 75;
+	repeat(2)
+	{
+		var _tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_player);
+		_tiro.direction = _pos;
+		_tiro.image_xscale = 1;
+		_tiro.image_yscale = _tiro.image_xscale;
+		_tiro.vspeed = 0;
+		_tiro.speed = 3;
+		_tiro.image_angle = _tiro.direction;
+		_pos += 30;
+	}
+}
+
+tiro_5 = function()
+{
+	tiro_4();
+	var _tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_player);
+	_tiro.direction = 0;
+	_tiro.vspeed = 0;
+	_tiro.speed = 2;
+	_tiro.image_angle = _tiro.direction;
+	
+	_tiro = instance_create_layer(x, y, "Projeteis", obj_tiro_player);
+	_tiro.direction = 180;
+	_tiro.vspeed = 0;
+	_tiro.speed = 2;
+	_tiro.image_angle = _tiro.direction;
+}
+
 //Método de ganhar level do tiro
 ganha_level_tiro = function()
 {
 	//Aumenta o level se ele for menor de 3
-	if(level_tiro < 3) level_tiro++;
+	if(level_tiro < 5) level_tiro++;
 }
 
 //Método de ganhar vidas
@@ -173,13 +209,13 @@ desenha_icone = function(_spr = spr_vida_player, _reps = 1, _y = 20)
 }
 
 //Método para perder vida
-perde_vida = function()
+perde_vida = function(_qtd = 1)
 {
 	if(timer_invencivel > 0) return;
 	
 	if(vidas > 1)
 	{
-		vidas--;
+		vidas -= _qtd;
 		timer_invencivel = tempo_invencivel;
 		efeito_mola(1.3, 0.7);
 		timer_efeito_branco(3);
