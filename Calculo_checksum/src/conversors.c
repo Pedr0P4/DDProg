@@ -1,5 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
 
 char* DecToHex(int dec){
     int tempDiv;
@@ -59,4 +61,31 @@ char* DecToBin(int dec){
     }
     bin[memSpace-1] = '\0';
     return bin;
+}
+
+int HexToDec(char* hex){
+    int hexSize = strlen(hex)-1;
+    int contagem = hexSize-1;
+    int temp;
+    int sum = 0;
+
+    for(int i = 0; i < hexSize; i++){
+        if(hex[i] >= '0' && hex[i] <= '9'){
+            temp = hex[i] - '0';
+            temp *= pow(16, contagem--);
+            sum += temp;
+        } else if(hex[i] >= 'A' && hex[i] <= 'F'){
+            temp = hex[i] - 'A' + 10;
+            temp *= pow(16, contagem--);
+            sum += temp;
+        }
+    }
+
+    return sum;
+}
+
+int main(){
+    printf("%d em hexa é: %s\nAgora vamos voltar para decimal: %d", 2020, DecToHex(2020), HexToDec(DecToHex(2020)));
+
+    return 0;
 }
