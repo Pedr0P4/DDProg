@@ -2,10 +2,14 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
+#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/conversors.h"
 
-char* DecToHex(int dec){
-    int tempDiv;
-    int tempRest;
+/// @brief Converte de decimal para hexadecimal.
+/// @param dec O número decimal.
+/// @return O hexadecimal correspondente ao decimal fornecido.
+char* DecToHex(unsigned long int dec){
+    int tempDiv = 0;
+    int tempRest = 0;
     int memSpace = 1;
     char* hex = (char*)malloc(sizeof(char)*memSpace);
 
@@ -23,7 +27,7 @@ char* DecToHex(int dec){
     } while(tempDiv != 0);
 
     //INVERTER A STRING.
-    int hexSize = memSpace-1;
+    const int hexSize = memSpace-1;
     for(int i = 0; i < hexSize/2; i++){
         char temp = hex[i];
         hex[i] = hex[hexSize-i-1];
@@ -33,13 +37,16 @@ char* DecToHex(int dec){
     return hex;
 }
 
-char* DecToBin(int dec){
-    int tempDiv;
-    int tempRest;
+/// @brief Converte de decimal para binário.
+/// @param dec O número decimal.
+/// @return O binário correspondente ao decimal fornecido.
+char* DecToBin(unsigned long int dec){
+    int tempDiv = 0;
+    int tempRest = 0;
     int memSpace = 1;
     char* bin = (char*)malloc(sizeof(char)*memSpace);
-
-    //FAZER A CONVERSÃO DOS RESTOS PARA HEXADECIMAL.
+    
+    //FAZER A CONVERSÃO DOS RESTOS PARA BINÁRIO.
     do{
         if(memSpace == 1){
             tempDiv = dec/2;
@@ -53,7 +60,7 @@ char* DecToBin(int dec){
     } while(tempDiv != 0);
 
     //INVERTER A STRING.
-    int binSize = memSpace-1;
+    const int binSize = memSpace-1;
     for(int i = 0; i < binSize/2; i++){
         char temp = bin[i];
         bin[i] = bin[binSize-i-1];
@@ -63,20 +70,24 @@ char* DecToBin(int dec){
     return bin;
 }
 
+/// @brief Converte de hexadecimal para decimal.
+/// @param hex O número binário.
+/// @return O decimal correspondente ao hexadecimal fornecido.
 int HexToDec(char* hex){
-    int hexSize = strlen(hex)-1;
-    int contagem = hexSize-1;
+    const unsigned int hexSize = strlen(hex);
+    int count = hexSize - 1;
     int temp;
     int sum = 0;
 
+    // SOMA DOS CARACTERES HEXADECIMAIS MULTIPLICADOS POR 16 ELEVADO À POSIÇÃO DO CARACTERE NO HEXADECIMAL.
     for(int i = 0; i < hexSize; i++){
         if(hex[i] >= '0' && hex[i] <= '9'){
             temp = hex[i] - '0';
-            temp *= pow(16, contagem--);
+            temp *= (int)pow(16, count--);
             sum += temp;
         } else if(hex[i] >= 'A' && hex[i] <= 'F'){
             temp = hex[i] - 'A' + 10;
-            temp *= pow(16, contagem--);
+            temp *= (int)pow(16, count--);
             sum += temp;
         }
     }
@@ -84,8 +95,68 @@ int HexToDec(char* hex){
     return sum;
 }
 
-int main(){
-    printf("%d em hexa é: %s\nAgora vamos voltar para decimal: %d", 2020, DecToHex(2020), HexToDec(DecToHex(2020)));
+/// @brief Converte de binário para decimal.
+/// @param bin O número binário.
+/// @return O decimal correspondente ao binário fornecido.
+int BinToDec(char* bin){
+    const unsigned int binSize = strlen(bin);
+    int count = binSize-1;
+    int temp;
+    int sum = 0;
 
-    return 0;
+    // SOMA DOS CARACTERES BINÁRIOS MULTIPLICADOS POR 2 ELEVADO À POSIÇÃO DO CARACTERE NO BINÁRIO.
+    for(int i = 0; i < binSize; i++){
+        if(bin[i] >= '0' && bin[i] <= '9'){
+            temp = bin[i] - '0';
+            temp *= (int)pow(2, count--);
+            sum += temp;
+        } else if(bin[i] >= 'A' && bin[i] <= 'F'){
+            temp = bin[i] - 'A' + 10;
+            temp *= (int)pow(2, count--);
+            sum += temp;
+        }
+    }
+
+    return sum;
+}
+
+char** IPToHex(char* ip){
+	unsigned int indexMatrix = 0, index = 0;
+	char* token;
+	char** HexList = (char**)malloc(sizeof(char*)*4);
+
+	token = strtok(ip, ".");
+	while(token != NULL && indexMatrix < 4){
+		int dec = atoi(token);
+		if(dec < 0 || dec > 255){
+			printf("Valor do endereço IP inválido: %d\n", dec);
+			free(HexList);
+			return NULL;
+		}
+		HexList[indexMatrix++] = DecToHex(dec);
+		token = strtok(NULL, ".");
+	}
+
+	return HexList;
+}
+
+int main(){
+	char IP[16];
+	printf("Digite o IP: ");
+	fgets(IP, sizeof(IP), stdin);
+
+	size_t len = strlen(IP);
+
+	if(len > 0 && IP[len-1] == '\n'){
+		printf("Tinha, em!");
+		IP[len-1] = '\0';
+	}
+	char** teste = IPToHex(IP);
+
+	printf("Deu certo!\n");
+	for(int i=0;i<4;i++){
+		printf("%s\n", teste[i]);
+	}
+
+	return 0;
 }
