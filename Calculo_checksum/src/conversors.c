@@ -121,42 +121,48 @@ int BinToDec(char* bin){
 }
 
 char** IPToHex(char* ip){
-	unsigned int indexMatrix = 0, index = 0;
+	unsigned int indexMatrix = 0, index = 0, count = 0;
 	char* token;
-	char** HexList = (char**)malloc(sizeof(char*)*4);
+	char** HexList = (char**)malloc(sizeof(char*)*2);
+
+	for(int i=0;i<2;i++){
+		HexList[i] = (char*)malloc(sizeof(char)*5);
+	}	
 
 	token = strtok(ip, ".");
-	while(token != NULL && indexMatrix < 4){
+	while(token != NULL && indexMatrix < 2){
+		if(count >= 5) break;
+
 		int dec = atoi(token);
+
 		if(dec < 0 || dec > 255){
 			printf("Valor do endereço IP inválido: %d\n", dec);
 			free(HexList);
 			return NULL;
 		}
-		HexList[indexMatrix++] = DecToHex(dec);
+
+		char* hex = DecToHex(dec);
+
+		if(strlen(hex) == 1){
+			hex = (char*)realloc(hex, sizeof(char)*3);
+			hex[1] = hex[0];
+			hex[0] = '0';
+			hex[2] = '\0';
+		}
+
+		if(strlen(HexList[indexMatrix]) >= 1 && strlen(HexList[indexMatrix]) < 4){
+			HexList[indexMatrix] = strcat(HexList[indexMatrix], hex);
+			HexList[indexMatrix][4] = '\0';
+			indexMatrix++;
+		} else if(strlen(HexList[indexMatrix]) < 2){
+			strcpy(HexList[indexMatrix], hex);
+		}
+		
+		count++;
 		token = strtok(NULL, ".");
 	}
+	
+	
 
 	return HexList;
-}
-
-int main(){
-	char IP[16];
-	printf("Digite o IP: ");
-	fgets(IP, sizeof(IP), stdin);
-
-	size_t len = strlen(IP);
-
-	if(len > 0 && IP[len-1] == '\n'){
-		printf("Tinha, em!");
-		IP[len-1] = '\0';
-	}
-	char** teste = IPToHex(IP);
-
-	printf("Deu certo!\n");
-	for(int i=0;i<4;i++){
-		printf("%s\n", teste[i]);
-	}
-
-	return 0;
 }
