@@ -3,6 +3,8 @@
 #include <math.h>
 #include <stdio.h>
 #include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/conversors.h"
+#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/operations.h"
+
 
 /// @brief Converte de decimal para hexadecimal.
 /// @param dec O número decimal.
@@ -120,6 +122,42 @@ int BinToDec(char* bin){
     return sum;
 }
 
+void AdjustHex(char* hex){
+	size_t size = strlen(hex);
+	if(size > 4){	
+		unsigned int carry = (unsigned int)size - 4;
+		char* tempHexCarry = (char*)malloc(sizeof(char)*carry+1);
+		char* tempHex = (char*)malloc(sizeof(char)*5);
+		for(int i=0;i<carry;i++){
+			tempHexCarry[i] = hex[i];
+		}	
+		for(int i=carry-1;i<size;i++){
+			hex[i] = tempHex[i-carry-1];
+		}
+		tempHexCarry[carry] = '\0';
+		tempHex[size-carry] = '\0';
+		char* tempResult = HexSum(tempHexCarry, tempHex);
+		hex = (char*)realloc(hex, sizeof(char)*5);
+		strcpy(hex, tempResult);
+		hex[4] = '\0';
+
+		free(tempResult);
+		free(tempHexCarry);
+		free(tempHex);
+	} else if(size < 4){
+		unsigned int zeros = 4-size;
+		char* tempHex = (char*)malloc(sizeof(char)*5);
+		hex = (char*)realloc(hex, sizeof(char)*5);
+
+		for(int i=0;i<zeros;i++){
+			tempHex[i] = '0';
+		}
+		strcat(tempHex, hex);
+		strcpy(hex, tempHex);
+		free(tempHex);
+	}
+}
+
 char** IPToHex(char* ip){
 	unsigned int indexMatrix = 0, index = 0, count = 0;
 	char* token;
@@ -162,7 +200,12 @@ char** IPToHex(char* ip){
 		token = strtok(NULL, ".");
 	}
 	
-	
-
 	return HexList;
+}
+
+int main(){
+	char* test = DecToHex(10);
+	AdjustHex(test);
+
+	return 0;
 }
