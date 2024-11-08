@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdio.h>
-#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/conversors.h"
-#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/operations.h"
+#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\operations.h"
+#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\conversors.h"
 
 
 /// @brief Converte de decimal para hexadecimal.
@@ -152,12 +152,33 @@ char* AdjustHex(char* hex){
 		return hex;
 	} else if(size < 4){
 		unsigned int zeros = 4-size;
-		char* tempHex = (char*)malloc(sizeof(char)*5);
+		char* tempHex = (char*)calloc(5, sizeof(char));
 		hex = (char*)realloc(hex, sizeof(char)*5);
 
 		for(int i=0;i<zeros;i++){
 			tempHex[i] = '0';
 		}
+		strcat(tempHex, hex);
+		strcpy(hex, tempHex);
+		free(tempHex);
+
+		return hex;
+	}
+
+	return hex;
+}
+
+char* AdjustHexTwo(char* hex){
+	size_t size = strlen(hex);
+	if(size < 2){
+		unsigned int zeros = 2-size;
+		char* tempHex = (char*)calloc(3, sizeof(char));
+		hex = (char*)realloc(hex, sizeof(char)*3);
+
+		for(int i=0;i<zeros;i++){
+			tempHex[i] = '0';
+		}
+
 		strcat(tempHex, hex);
 		strcpy(hex, tempHex);
 		free(tempHex);
@@ -174,10 +195,11 @@ char** IPToHex(char* ip){
 	char** HexList = (char**)malloc(sizeof(char*)*2);
 
 	for(int i=0;i<2;i++){
-		HexList[i] = (char*)malloc(sizeof(char)*5);
+		HexList[i] = (char*)calloc(5, sizeof(char));
 	}	
 
 	token = strtok(ip, ".");
+
 	while(token != NULL && indexMatrix < 2){
 		if(count >= 5) break;
 
@@ -189,14 +211,7 @@ char** IPToHex(char* ip){
 			return NULL;
 		}
 
-		char* hex = DecToHex(dec);
-
-		if(strlen(hex) == 1){
-			hex = (char*)realloc(hex, sizeof(char)*3);
-			hex[1] = hex[0];
-			hex[0] = '0';
-			hex[2] = '\0';
-		}
+		char* hex = AdjustHexTwo(DecToHex(dec));
 
 		if(strlen(HexList[indexMatrix]) >= 1 && strlen(HexList[indexMatrix]) < 4){
 			HexList[indexMatrix] = strcat(HexList[indexMatrix], hex);
@@ -210,5 +225,77 @@ char** IPToHex(char* ip){
 		token = strtok(NULL, ".");
 	}
 	
+//    printf("%s\n", HexList[0]);
+//    printf("%s\n", HexList[1]);
+
 	return HexList;
+}
+
+char** DataToHex(char* data){
+    size_t len = strlen(data);
+    int* arr = (int*)calloc(len, sizeof(int));
+    int* temp = (int*)calloc(2, sizeof(int));
+    unsigned int index = 0, memSize = 1, count = 0, indexMatrix = 0;
+    char** dataHexMatrix = (char**)malloc(sizeof(char*)*memSize);
+
+    for(int i=0; data[i]!='\0'; i++){
+        arr[i] = (int)data[i];
+    }
+    arr[len] = '\0';
+
+    while(arr[count] != '\0'){
+       if(index == 0 && arr[count+1] == '\0'){
+            dataHexMatrix[indexMatrix] = AdjustHex(DecToHex(arr[count++]));
+       } else if(index == 0){
+            temp[index++] = arr[count++];
+       } else if(index == 1){
+            temp[index] = arr[count++];
+            dataHexMatrix[indexMatrix] = AdjustHexTwo(DecToHex(temp[0]));
+            strcat(dataHexMatrix[indexMatrix++], AdjustHexTwo(DecToHex(temp[1])));
+            dataHexMatrix = (char**)realloc(dataHexMatrix, sizeof(char*)*++memSize);
+            index = 0;
+       }
+    }
+
+    free(temp);
+    return dataHexMatrix;
+}
+
+char** DataToHexNL(char* data){
+    size_t len = strlen(data);
+    int* arr = (int*)calloc(len, sizeof(int));
+    int* temp = (int*)calloc(2, sizeof(int));
+    unsigned int index = 0, memSize = 1, count = 0, indexMatrix = 0;
+    char** dataHexMatrix = (char**)malloc(sizeof(char*)*memSize);
+
+    for(int i=0; data[i]!='\0'; i++){
+        arr[i] = (int)data[i];
+    }
+    arr[len] = '\0';
+
+    while(arr[count] != '\0'){
+       if(index == 0 && arr[count+1] == '\0'){
+            dataHexMatrix[indexMatrix] = AdjustHexTwo(DecToHex(arr[count++]));
+            strcat(dataHexMatrix[indexMatrix], AdjustHexTwo(DecToHex((int)'\n')));
+       } else if(index == 0){
+            temp[index] = arr[count];
+            index++;
+            count++;
+       } else if(index == 1 && arr[count+1] == '\0'){
+            temp[index] = arr[count++];
+            dataHexMatrix[indexMatrix] = AdjustHexTwo(DecToHex(temp[0]));
+            strcat(dataHexMatrix[indexMatrix++], AdjustHexTwo(DecToHex(temp[1])));
+            dataHexMatrix = (char**)realloc(dataHexMatrix, sizeof(char*)*++memSize);
+            dataHexMatrix[indexMatrix] = AdjustHex(DecToHex((int)'\n'));
+       } else if(index == 1){
+            temp[index] = arr[count++];
+            dataHexMatrix[indexMatrix] = AdjustHexTwo(DecToHex(temp[0]));
+            strcat(dataHexMatrix[indexMatrix++], AdjustHexTwo(DecToHex(temp[1])));
+            dataHexMatrix = (char**)realloc(dataHexMatrix, sizeof(char*)*++memSize);
+            index = 0;
+       }
+    }
+
+    free(temp);
+    return dataHexMatrix;
 }

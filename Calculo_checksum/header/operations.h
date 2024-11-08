@@ -3,7 +3,11 @@
 
 char* HexSum(char* hex1, char* hex2);
 
+char* HexSub(char* hex1, char* hex2);
+
 char* BinSum(char* bin1, char* bin2);
+
+char* BinSub(char* bin1, char* bin2);
 
 char* HexSumAll(char** hexList);
 

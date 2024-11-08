@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/operations.h"
-#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/conversors.h"
+#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\operations.h"
+#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\conversors.h"
 
 void limparEntrada(){
 	int c;
@@ -48,14 +48,23 @@ char* ColectDados(){
 	}
 	dado[pos] = '\0';
 
-	if(strlen(dado) == size-1){
-		limparEntrada();
-	}
+//	if(strlen(dado) == 4){
+//		limparEntrada();
+//	}
 
 	return dado;
 }
 
+unsigned int MatrixSize(char** list){
+	unsigned int index = 0;
+	while(list[index] != NULL){
+		index++;
+	}
+	return index;
+}
+
 int main(){
+	/*
 	printf("Digite o IP de origem: ");
 	char* ipOri = ColectInfo(16);
 	printf("Digite o IP de destino: ");
@@ -64,12 +73,22 @@ int main(){
 	char* portOri = ColectInfo(6);
 	printf("Digite a porta de destino: ");
 	char* portDes = ColectInfo(6);
+	*/
 	printf("Digite o dado: ");
 	char* dado = ColectDados();
-	
+
+	char** dataList = DataToHexNL(dado);
+	unsigned int dataListLen = MatrixSize(dataList);
+	for(int i=0;i<dataListLen;i++){
+		printf("%s\n", dataList[i]);
+	}
+	printf("Deu?\n");
+	/*
+	size_t memMatrixSize = 9;
 	char** ipOriHex = IPToHex(ipOri);
 	char** ipDesHex = IPToHex(ipDes);
-	char** geralList = (char**)malloc(sizeof(char*)*10);
+	char** dataList = DataToHexNL(dado);
+	char** geralList = (char**)malloc(sizeof(char*)*memMatrixSize);
 	geralList[0] = ipOriHex[0];
 	geralList[1] = ipOriHex[1];
 	geralList[2] = ipDesHex[0];
@@ -79,7 +98,19 @@ int main(){
 	geralList[6] = AdjustHex(DecToHex(atoi(portOri)));
 	geralList[7] = AdjustHex(DecToHex(atoi(portDes)));
 	geralList[8] = AdjustHex(DecToHex(strlen(dado)+8));
-	geralList[9] = AdjustHex(DecToHex((int)dado[0]));
 
+
+	unsigned int index = 0;
+	while(dataList[index] != NULL){
+		geralList = (char**)realloc(geralList, sizeof(char*)*++memMatrixSize);
+		geralList[memMatrixSize-1] = dataList[index++];
+	}
+	geralList[memMatrixSize] = NULL;
+
+	printf("Começando\n");
+	PrintAll(geralList);
+	printf("Finalizado\n");
+	char* sum = AdjustHex(HexSumAll(geralList));
+	*/
     return 0;
 }

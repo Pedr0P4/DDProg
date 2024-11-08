@@ -11,6 +11,12 @@ int BinToDec(char* bin);
 
 char* AdjustHex(char* hex);
 
+char* AdjustHexTwo(char* hex);
+
 char** IPToHex(char* ip);
+
+char** DataToHex(char* data);
+
+char** DataToHexNL(char* data);
 
 #endif //CONVERSORS_H
