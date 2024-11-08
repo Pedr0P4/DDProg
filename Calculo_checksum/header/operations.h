@@ -5,4 +5,8 @@ char* HexSum(char* hex1, char* hex2);
 
 char* BinSum(char* bin1, char* bin2);
 
+char* HexSumAll(char** hexList);
+
+char* BinSumAll(char** binList);
+
 #endif //OPERATIONS_H

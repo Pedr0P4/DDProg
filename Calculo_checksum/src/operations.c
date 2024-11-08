@@ -14,6 +14,24 @@ char* BinSum(char* bin1, char* bin2){
 	return DecToBin(dec1+dec2);
 }
 
+char* HexSumAll(char** hexList){
+	unsigned int indexMatrix = 0;
+	char* tempHex = NULL; 
+	while(hexList[indexMatrix] != NULL){
+		tempHex = HexSum(tempHex, hexList[indexMatrix++]);
+	}
+	return tempHex;
+}
+
+char* BinSumAll(char** binList){
+	unsigned int indexMatrix = 0;
+	char* tempBin = NULL; 
+	while(binList[indexMatrix] != NULL){
+		tempBin = HexSum(tempBin, binList[indexMatrix++]);
+	}
+	return tempBin;
+}
+
 /*
 int main(){
 

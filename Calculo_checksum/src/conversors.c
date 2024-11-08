@@ -76,6 +76,8 @@ char* DecToBin(unsigned long int dec){
 /// @param hex O número binário.
 /// @return O decimal correspondente ao hexadecimal fornecido.
 int HexToDec(char* hex){
+	if(hex == NULL) return 0;
+
     const unsigned int hexSize = strlen(hex);
     int count = hexSize - 1;
     int temp;
@@ -101,6 +103,8 @@ int HexToDec(char* hex){
 /// @param bin O número binário.
 /// @return O decimal correspondente ao binário fornecido.
 int BinToDec(char* bin){
+	if(bin == NULL) return 0;
+
     const unsigned int binSize = strlen(bin);
     int count = binSize-1;
     int temp;
@@ -131,8 +135,8 @@ void AdjustHex(char* hex){
 		for(int i=0;i<carry;i++){
 			tempHexCarry[i] = hex[i];
 		}	
-		for(int i=carry-1;i<size;i++){
-			hex[i] = tempHex[i-carry-1];
+		for(int i=carry;i<size;i++){
+			tempHex[i-carry] = hex[i];
 		}
 		tempHexCarry[carry] = '\0';
 		tempHex[size-carry] = '\0';
@@ -201,11 +205,4 @@ char** IPToHex(char* ip){
 	}
 	
 	return HexList;
-}
-
-int main(){
-	char* test = DecToHex(10);
-	AdjustHex(test);
-
-	return 0;
 }
