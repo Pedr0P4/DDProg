@@ -126,7 +126,7 @@ int BinToDec(char* bin){
     return sum;
 }
 
-void AdjustHex(char* hex){
+char* AdjustHex(char* hex){
 	size_t size = strlen(hex);
 	if(size > 4){	
 		unsigned int carry = (unsigned int)size - 4;
@@ -148,6 +148,8 @@ void AdjustHex(char* hex){
 		free(tempResult);
 		free(tempHexCarry);
 		free(tempHex);
+
+		return hex;
 	} else if(size < 4){
 		unsigned int zeros = 4-size;
 		char* tempHex = (char*)malloc(sizeof(char)*5);
@@ -159,7 +161,11 @@ void AdjustHex(char* hex){
 		strcat(tempHex, hex);
 		strcpy(hex, tempHex);
 		free(tempHex);
+
+		return hex;
 	}
+
+	return hex;
 }
 
 char** IPToHex(char* ip){

@@ -31,12 +31,3 @@ char* BinSumAll(char** binList){
 	}
 	return tempBin;
 }
-
-/*
-int main(){
-
-	printf("%s\n", DecToHex(10));
-
-	return 0;
-}
-*/

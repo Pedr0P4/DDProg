@@ -9,7 +9,7 @@ int HexToDec(char* hex);
 
 int BinToDec(char* bin);
 
-void AdjustHex(char* hex);
+char* AdjustHex(char* hex);
 
 char** IPToHex(char* ip);
 
