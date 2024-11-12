@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\operations.h"
-#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\conversors.h"
+#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/operations.h"
+#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/conversors.h"
 
 void limparEntrada(){
 	int c;

@@ -1,5 +1,5 @@
-#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\operations.h"
-#include "C:\Users\SUPORTE\Documents\DDProg\Calculo_checksum\header\conversors.h"
+#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/operations.h"
+#include "/home/pedro-paulo/Documentos/DDProg/Calculo_checksum/header/conversors.h"
 #include <stdio.h>
 
 char* HexSum(char* hex1, char* hex2){
