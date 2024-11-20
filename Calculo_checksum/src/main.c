@@ -35,12 +35,47 @@ char* DecToHex(int dec){
 	return hex;
 }
 
+void AdjustHex(char** hex) {
+    unsigned int size = strlen(*hex);
+    if (size < 4) {
+        unsigned int zeros = 4 - size;
+        char* tempStr = (char*)calloc(zeros + size + 1, sizeof(char));
+
+        if (tempStr == NULL) {
+            fprintf(stderr, "Erro ao alocar memória.\n");
+            return;
+        }
+
+        // Preenche com zeros à esquerda
+        for (unsigned int i = 0; i < zeros; i++) {
+            tempStr[i] = '0';
+        }
+
+        // Copia a string original para tempStr
+        strcat(tempStr, *hex);
+
+        // Realoca hex para o novo tamanho
+        *hex = (char*)realloc(*hex, sizeof(char) * (zeros + size + 1));
+        if (*hex == NULL) {
+            fprintf(stderr, "Erro ao realocar memória.\n");
+            free(tempStr);
+            return;
+        }
+
+        // Copia a string ajustada de volta para hex
+        strcpy(*hex, tempStr);
+
+        free(tempStr); // Libera a memória temporária
+    }
+}
+
 int main(){
 	int decimal = 0;
 	printf("Digite um número decimal:\n");
 	scanf("%d", &decimal);
 
 	char* result = DecToHex(decimal);
+	AdjustHex(&result);
 	printf("%d em hexadecimal é %s\n", decimal, result);
 
 	free(result);
