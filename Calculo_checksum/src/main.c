@@ -3,13 +3,15 @@
 #include <string.h>
 
 char* DecToHex(int dec){
-	char* hex = (char*)calloc(5, sizeof(char));
+	unsigned int memSize = 1;
+	char* hex = (char*)calloc(memSize, sizeof(char));
 	unsigned int tempRest, tempDiv = dec, index = 0;
 
 	// CONVERSÃO PARA HEXADECIMAL
 	while(tempDiv > 0){
 		tempRest = tempDiv%16;
 		tempDiv = tempDiv/16;
+		hex = (char*)realloc(hex, sizeof(char)*++memSize);
 
 		if(tempRest < 10){
 			char* temp = (char*)calloc(2, sizeof(char));
