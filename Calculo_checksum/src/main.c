@@ -37,10 +37,10 @@ char* DecToHex(int dec){
 	return hex;
 }
 
-void AdjustHex(char** hex) {
+void AdjustHex(unsigned int length, char** hex) {
     unsigned int size = strlen(*hex);
-    if (size < 4) {
-        unsigned int zeros = 4 - size;
+    if (size < length) {
+        unsigned int zeros = length - size;
         char* tempStr = (char*)calloc(zeros + size + 1, sizeof(char));
 
         if (tempStr == NULL) {
@@ -77,7 +77,7 @@ int main(){
 	scanf("%d", &decimal);
 
 	char* result = DecToHex(decimal);
-	AdjustHex(&result);
+	AdjustHex(4, &result);
 	printf("%d em hexadecimal é %s\n", decimal, result);
 
 	free(result);
