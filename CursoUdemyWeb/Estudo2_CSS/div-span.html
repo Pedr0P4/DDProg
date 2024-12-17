@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Div e Span</title>
+
+    <style>
+        #topo{
+            background: blue;
+        }
+
+        #conteudo{
+            background: red;
+        }
+
+        #rodape{
+            background: green;
+        }
+
+        #assinatura{
+            background: pink;
+        }
+
+        .produto{
+            background: gray;
+            margin: 10px;
+        }
+
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="topo">
+        <img src="imagens/prime-video.png" width="125">
+        <ul>
+            <li>Home</li>
+            <li>Produtos</li>
+            <li>Contato</li>
+        </ul>
+    </div>
+
+    <div id="conteudo">
+        <div class="produto">
+            Produto 1
+        </div>
+        <div class="produto">
+            Produto 2
+        </div>
+        <div class="produto">
+            Produto 3
+        </div>
+    </div>
+
+    <div id="rodape">
+        Todos os <span class="azul">direitos</span> reservados
+    </div>
+
+    <span id="assinatura">
+        Pedro
+    </span>
+    <span>
+        Paulo
+    </span>
+</body>
+</html>

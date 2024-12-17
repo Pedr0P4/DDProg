@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bordas</title>
+
+    <style>
+        #conteudo{
+            /* Diferentes formas de definir uma borda */
+
+            /*tamanho, estilo e cor*/
+            /*border: 1px solid red;*/
+
+            /*Separação em partes*/
+            /*
+            as propriedades seguem o sentido horário. Ou seja:
+            - cima, direita, baixo, esquerda */
+            /*
+            border-color: red yellow green blue;
+            border-width: 15px 10px 5px 2px;
+            border-style: solid dotted dashed solid;
+            */
+
+            /*
+            Ao colocar apenas 2 parametros, o comportamento segue em: 
+            - Primeiro parametro aplicado para cima e baixo.
+            - Segundo parametro aplicado para esquerda e direita.
+            */
+            border-color: red yellow;
+            border-width: 15px 10px;
+            border-style: solid dotted;
+        }
+    </style>
+</head>
+<body>
+  <div id="conteudo">
+    Bordas <br>
+    Bordas <br>
+    Bordas <br>
+  </div>
+</body>
+</html>
