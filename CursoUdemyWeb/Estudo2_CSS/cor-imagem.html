@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho de textos</title>
+
+    <style>
+    	.fundo{
+			background-color: blue;
+			color: white;
+		}
+
+		body{
+			background-image: url('imagens/yoshi');
+			background-repeat: no-repeat;
+			/* 
+			Mesmo rolando a barra de rolagem, a imagem de fundo fica fixa no fundo 
+			Opções: 
+			- scroll 
+			- fixed
+			 */
+			background-attachment: fixed;
+			/*
+			   Primeiro parâmetro = eixo x 
+			   Segundo parâmetro = eixo y
+			 */
+			background-position: center;
+		}
+
+		.tudo{
+			background: yellow url('imagens/yoshi') repeat-x fixed center;
+		}
+    </style>
+</head>
+<body class="tudo">
+
+	<h1 class="fundo">Conteúdo de título 1</h1>
+
+</body>
+</html>
