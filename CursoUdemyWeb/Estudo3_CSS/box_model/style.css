@@ -1,0 +1,38 @@
+.conteudo{
+    border: 1px solid red;
+    width: 250px;
+    /*
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    */
+    /* 
+        Usando:
+        - 1 parâmetro: ele aplica nos 4 lados.
+        - 2 parâmetros: ele aplica o primeiro parâmetro em cima e em baixo e o segundo parâmetro nos lados.
+        - 4 parâmetros: cada parâmetro é um lado, começando do top e seguindo o sentido horário.
+    */
+    padding: 20px;
+
+    /*
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    */
+
+    /* Mesma coisa do padding, porém agora o gap será externamente */
+    margin: 20px
+}
+
+#noticia{
+    width: 450px;
+    background-color: bisque;
+    border: 3px solid gray;
+    padding: 10px;
+}
+
+h2{
+    margin: 0px;
+}
