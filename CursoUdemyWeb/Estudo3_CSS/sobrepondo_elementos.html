@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sobrepondo elementos</title>
+		
+		<style>
+			.conteudo1{
+				border: 1px solid red;
+				background: orange;
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				/* Quanto maior, mais para frente */
+				z-index: 1;
+			}
+
+			.conteudo2{
+				border: 1px solid red;
+				background: green;
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 80px;
+				left: 80px;
+				/* Quanto menor, mais para trás */
+				z-index: 0;
+			}		
+
+			.conteudo3{
+				border: 1px solid red;
+				background: yellow;
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 160px;
+				left: 160px;
+				/* Quando dois componentes possuem o mesmo z-index, segue a ordem do documento */
+				z-index: 1;
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="conteudo1">
+			Conteudo 1
+		</div>
+
+		<div class="conteudo2">
+			Conteudo 2
+		</div>
+
+		<div class="conteudo3">
+			Conteudo3
+		</div>
+	</body>
+</html>
