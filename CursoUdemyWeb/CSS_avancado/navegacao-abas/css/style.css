@@ -1,0 +1,73 @@
+/*******************
+Navegação em abas */
+
+/*
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a {
+    width: 200px;
+    height: 40px;
+    display: block;
+    background: #f7b600 url(../imagens/menu.png) no-repeat left bottom;
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    text-indent: 40px;
+}
+
+a:hover {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: white;
+}
+
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#contato #navegacao .contato a,
+#conta #navegacao .conta a,
+#noticias #navegacao .noticias a {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: white;
+}
+*/
+
+body {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    float: left;
+    background: url(../imagens/aba-direita.png) no-repeat top right;
+}
+
+li a {
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    background: url(../imagens/aba-esquerda.png) no-repeat top left;
+    text-decoration: none;
+    color: white;
+}
+
+ul a:hover {
+    color: #894a1f;
+}
+
+ul #atual {
+    background: url(../imagens/aba-direita-atual.png) no-repeat top right;
+}
+
+ul #atual a {
+    background: url(../imagens/aba-esquerda-atual.png) no-repeat top left;
+}
