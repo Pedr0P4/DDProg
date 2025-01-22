@@ -1,0 +1,91 @@
+/*****************************
+Barra de navegação vertical */
+
+/*
+ul {
+    border: 1px solid red;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 5px 20px;
+    background: url(../imagens/seta.png) no-repeat left center;
+}
+*/
+
+/*
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a {
+    width: 200px;
+    height: 40px;
+    display: block;
+    background: #f7b600 url(../imagens/menu.png) no-repeat left bottom;
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    text-indent: 40px;
+}
+
+a:hover {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: white;
+}
+
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#contato #navegacao .contato a,
+#conta #navegacao .conta a,
+#noticias #navegacao .noticias a {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: white;
+}
+*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 720px;
+    background: #159cb0 url(../imagens/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li {
+    float: left;
+}
+
+ul a {
+    display: block;
+    padding: 0 2em;
+    line-height: 2.2em;
+    text-decoration: none;
+    color: white;
+    background: url(../imagens/divisor.png) repeat-y left top;
+}
+
+ul .primeiro a {
+    background: none;
+}
+
+ul a:hover {
+    color: #085662;
+    background-color: #44cade;
+}
+
+#home #navegacao .home a,
+#sobre #navegacao .sobre a,
+#contato #navegacao .contato a,
+#conta #navegacao .conta a,
+#noticias #navegacao .noticias a {
+    color: #085662;
+    background-color: #44cade;
+}
