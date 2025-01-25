@@ -1,0 +1,22 @@
+.caixa {
+	background: url(../imagens/fundo-arredondamento.png) repeat-y;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.caixa h2 {
+	padding: 10px 20px;
+	background: url(../imagens/topo2.png) no-repeat left top;
+}
+
+.caixa p {
+	padding: 0px 20px;
+	margin-bottom: 0;
+}
+
+.caixa .ultimo {
+	width: 400px;
+	height: 24px;
+	background: url(../imagens/baixo2.png) no-repeat left bottom;
+}
