@@ -41,6 +41,11 @@ label {
 	cursor: pointer;
 }
 
+img.imagem-principal {
+	width: 98%;
+	border: 3px solid #dfdfdf;
+}
+
 #container #topo #menu {
 	margin-top: 30px;
 	background: #b10333;
@@ -130,6 +135,27 @@ body.fotos #topo #menu a#fotos {
 	padding: 5px;
 }
 
+.caixa .noticia h3 {
+	text-transform: uppercase;
+	display: inline;
+	font-size: 0.8em;
+	padding: 3px;
+	background: #b10333;
+	color: #fff;
+}
+
+.caixa .caixa-conteudo a.leia-mais {
+	display: block;
+	text-align: center;
+	background: #d8d8d8;
+	padding: 0.2em;
+	margin-top: 0.3em;
+}
+
+.caixa .caixa-conteudo a.leia-mais:hover {
+	background: #cecece;
+}
+
 #lateral ul a {
 	font-size: 0.9em;
 	padding: 3px;
@@ -165,12 +191,39 @@ body.fotos #topo #menu a#fotos {
 	padding: 5px;
 }
 
+.lista-noticias li {
+	padding: 2px;
+	border-bottom: 1px solid #ccc;
+	height: 62px;
+}
+
+.lista-noticias li a img {
+	float: left;
+	margin: 5px;
+}
+
+.lista-noticias li a h3 {
+	font-size: 0.9em;
+	padding: 0;
+	color: #3e7ab9;
+}
+
+.lista-noticias li a p {
+	font-size: 0.7em;
+}
+
+.lista-noticias li:hover {
+	background: #dddddd;
+	cursor: pointer;
+}
+
 #container-rodape {
 	background: #294c71;
 	padding: 20px;
 }
 
 #container-rodape #rodape {
+	text-align: center;
 	width: 750px;
 	margin: 0 auto;
 	color: #fff;
