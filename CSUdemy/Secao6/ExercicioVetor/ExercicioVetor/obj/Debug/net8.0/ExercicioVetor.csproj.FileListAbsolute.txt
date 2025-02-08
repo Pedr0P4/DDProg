@@ -1,0 +1,15 @@
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\bin\Debug\net8.0\ExercicioVetor.exe
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\bin\Debug\net8.0\ExercicioVetor.deps.json
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\bin\Debug\net8.0\ExercicioVetor.runtimeconfig.json
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\bin\Debug\net8.0\ExercicioVetor.dll
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\bin\Debug\net8.0\ExercicioVetor.pdb
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.AssemblyInfoInputs.cache
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.AssemblyInfo.cs
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.csproj.CoreCompileInputs.cache
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.sourcelink.json
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.dll
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\refint\ExercicioVetor.dll
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.pdb
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ExercicioVetor.genruntimeconfig.cache
+C:\Users\Cecília\OneDrive\Documentos\Documentos\DDProg\CSUdemy\Secao6\ExercicioVetor\ExercicioVetor\obj\Debug\net8.0\ref\ExercicioVetor.dll
