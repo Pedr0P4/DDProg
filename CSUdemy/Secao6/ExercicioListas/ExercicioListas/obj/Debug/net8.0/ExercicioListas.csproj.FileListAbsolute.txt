@@ -1,0 +1,15 @@
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\bin\Debug\net8.0\ExercicioListas.exe
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\bin\Debug\net8.0\ExercicioListas.deps.json
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\bin\Debug\net8.0\ExercicioListas.runtimeconfig.json
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\bin\Debug\net8.0\ExercicioListas.dll
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\bin\Debug\net8.0\ExercicioListas.pdb
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.AssemblyInfoInputs.cache
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.AssemblyInfo.cs
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.sourcelink.json
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.dll
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\refint\ExercicioListas.dll
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.pdb
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ExercicioListas.genruntimeconfig.cache
+C:\Users\user\Documents\DDProg\CSUdemy\Secao6\ExercicioListas\ExercicioListas\obj\Debug\net8.0\ref\ExercicioListas.dll
