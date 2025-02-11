@@ -1,0 +1,15 @@
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.AssemblyInfoInputs.cache
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.AssemblyInfo.cs
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.csproj.CoreCompileInputs.cache
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.sourcelink.json
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\bin\Debug\net8.0\DesafioSumarioPedidos.exe
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\bin\Debug\net8.0\DesafioSumarioPedidos.deps.json
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\bin\Debug\net8.0\DesafioSumarioPedidos.runtimeconfig.json
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\bin\Debug\net8.0\DesafioSumarioPedidos.dll
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\bin\Debug\net8.0\DesafioSumarioPedidos.pdb
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.dll
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\refint\DesafioSumarioPedidos.dll
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.pdb
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\DesafioSumarioPedidos.genruntimeconfig.cache
+C:\Users\Suporte - CB\Documents\DDProg\CSUdemy\Secao8\DesafioSumarioPedidos\DesafioSumarioPedidos\obj\Debug\net8.0\ref\DesafioSumarioPedidos.dll
