@@ -1,0 +1,15 @@
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\bin\Debug\net8.0\MetodosAbstratos1.exe
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\bin\Debug\net8.0\MetodosAbstratos1.deps.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\bin\Debug\net8.0\MetodosAbstratos1.runtimeconfig.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\bin\Debug\net8.0\MetodosAbstratos1.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\bin\Debug\net8.0\MetodosAbstratos1.pdb
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.AssemblyInfoInputs.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.AssemblyInfo.cs
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.sourcelink.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\refint\MetodosAbstratos1.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.pdb
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\MetodosAbstratos1.genruntimeconfig.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao9\MetodosAbstratos1\MetodosAbstratos1\obj\Debug\net8.0\ref\MetodosAbstratos1.dll
