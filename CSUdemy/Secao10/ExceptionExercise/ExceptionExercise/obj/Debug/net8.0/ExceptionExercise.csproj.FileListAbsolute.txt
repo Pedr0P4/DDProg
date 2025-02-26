@@ -1,0 +1,15 @@
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\bin\Debug\net8.0\ExceptionExercise.exe
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\bin\Debug\net8.0\ExceptionExercise.deps.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\bin\Debug\net8.0\ExceptionExercise.runtimeconfig.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\bin\Debug\net8.0\ExceptionExercise.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\bin\Debug\net8.0\ExceptionExercise.pdb
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.AssemblyInfoInputs.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.AssemblyInfo.cs
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.sourcelink.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\refint\ExceptionExercise.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.pdb
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ExceptionExercise.genruntimeconfig.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao10\ExceptionExercise\ExceptionExercise\obj\Debug\net8.0\ref\ExceptionExercise.dll
