@@ -1,0 +1,15 @@
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\bin\Debug\net8.0\ExercicioArquivos.exe
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\bin\Debug\net8.0\ExercicioArquivos.deps.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\bin\Debug\net8.0\ExercicioArquivos.runtimeconfig.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\bin\Debug\net8.0\ExercicioArquivos.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\bin\Debug\net8.0\ExercicioArquivos.pdb
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.AssemblyInfoInputs.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.AssemblyInfo.cs
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.sourcelink.json
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\refint\ExercicioArquivos.dll
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.pdb
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ExercicioArquivos.genruntimeconfig.cache
+C:\Users\pedro\OneDrive\Documentos\DDProg\CSUdemy\Secao11\ExercicioArquivos\ExercicioArquivos\obj\Debug\net8.0\ref\ExercicioArquivos.dll
