@@ -1,0 +1,57 @@
+body {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-input label {
+	display: inline-block;
+	padding: 5px 5px 5px 0px;
+}
+
+.form-input input {
+	display: block;
+	border: 1px solid #f1f1f1;
+	height: 32px;
+	width: 250px;
+	font-size: 16pt;
+}
+
+.form-input input.input-number {
+	width: 125px;
+}
+
+.button-calc button {
+	width: 100px;
+	padding: 10px;
+	background-color: #c4ef8a;
+	border: 2px solid #88ac58;
+	font-size: 16px;
+	color: #3a6400;
+}
+
+.button-calc button:hover {
+	background-color: #88ac58;
+	color: #e8ffc8;
+	cursor: pointer;
+}
+
+#mensagem-erro-nome h4 .danger,
+#mensagem-erro-altura h4 .danger,
+#mensagem-erro-peso h4 .danger {
+	font-weight: bold;
+	color: red;
+}
+
+#resultado h4 .normal {
+	color: green;
+	font-weight: bold;
+}
+
+#resultado h4 .moderado {
+	color: orange;
+	font-weight: bold;
+}
+
+#resultado h4 .grave {
+	color: red;
+	font-weight: bold;
+}
