@@ -1,0 +1,95 @@
+#calculadora {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 360px;
+	height: 480px;
+	background-color: gray;
+	margin: auto;
+	border-radius: 15px;
+}
+
+#calculadora #visor {
+	margin: 0 auto;
+	width: 320px;
+	height: 65px;
+}
+
+#calculadora #visor input {
+	width: 99%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#calculadora #visor .vsr-estilo {
+	border: 2px solid #bebebe;
+	border-radius: 10px;
+	background-color: #efefef;
+	font-size: 24px;
+	text-align: right;
+}
+
+#calculadora #teclado {
+	height: 330px;
+	width: 320px;
+	margin: 0 auto;
+}
+
+#calculadora #teclado .tcl-estilo {
+	border: 2px solid #bebebe;
+	border-radius: 10px;
+	background-color: #efefef;
+	font-size: 32px;
+	font-weight: bold;
+	color: #565656;
+	transition: all 0.1s;
+}
+
+#calculadora #teclado .tcl-estilo:hover {
+	background-color: #bebebe;
+	color: #262626;
+	cursor: pointer;
+}
+
+#calculadora #teclado #funcoes .tcl-estilo {
+	font-size: 16px;
+}
+
+#calculadora #teclado #numeros {
+	float: left;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 236px;
+}
+
+#calculadora #teclado #operacoes {
+	float: right;
+	width: 80px;
+	height: 280px;
+}
+
+#calculadora #teclado #operacoes button {
+	float: right;
+}
+
+#calculadora #teclado .tecla {
+	width: 65px;
+	height: 65px;
+	margin-top: 5px;
+}
+
+#calculadora #teclado .null {
+	width: 65px;
+	height: 65px;
+}
+
+#calculadora #teclado #funcoes {
+	height: 50px;
+}
+
+#calculadora #teclado .func-tecla {
+	width: 50px;
+	height: 35px;
+}
