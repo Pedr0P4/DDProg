@@ -45,13 +45,20 @@ function invertSignal() {
 
 	if(canOperate){
 		for(let i = valor.length-1; i > 0; i--){
+			
+			if(valor[i] === " "){
+				visor.value = MidAppend(valor, i, "(-");
+				bracketsOpen++;
+				break;
+			}
+			
 			if(bracketsOpen > 0 && valor[i] === "-" && valor[i-1] === "(") {
 				visor.value = MidRemove(valor, i-1, i+1);
 				break;
-			} else if(bracketsOpen > 0 && valor[i] === "(") {
+			} else if(bracketsOpen > 0 && valor[i] === "("){
 				visor.value = MidAppend(valor, i, "-");
 				break;
-			}	
+			} 
 		}
 	}
 }
@@ -70,10 +77,21 @@ function openCloseBracket() {
 
 function apagar() {
 	let valor = visor.value;
-	if(valor[valor.length-1] == " ") visor.value = valor.slice(0, -3);
-	else visor.value = valor.slice(0, -1);
+	if(valor[valor.length-1] === " "){
+		visor.value = valor.slice(0, -3);
+		canOperate = true;
+	}
+	else{
+		if(valor[valor.length-1] === "(") bracketsOpen--;
+		else if(valor[valor.length-1] === ")") bracketsOpen++;
+		visor.value = valor.slice(0, -1);	
+	}
+
+	if(visor.value[visor.value.length-1] === " ") canOperate = false;
 }
 
 function clearBt() {
 	visor.value = "";
+	bracketsOpen = 0;
+	canOperate = false;
 }
