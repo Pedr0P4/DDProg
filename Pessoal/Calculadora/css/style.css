@@ -3,35 +3,40 @@
 	flex-direction: column;
 	justify-content: space-around;
 	width: 360px;
-	height: 480px;
+	height: 500px;
 	background-color: gray;
 	margin: auto;
 	border-radius: 15px;
 }
 
-#calculadora #visor {
+#calculadora #visor-div {
 	margin: 0 auto;
 	width: 320px;
 	height: 65px;
 }
 
-#calculadora #visor input {
+#calculadora #visor-div input {
 	width: 99%;
 	height: 100%;
 	padding: 0;
 	margin: 0;
 }
 
-#calculadora #visor .vsr-estilo {
+#calculadora #visor-div .vsr-estilo {
 	border: 2px solid #bebebe;
 	border-radius: 10px;
 	background-color: #efefef;
-	font-size: 24px;
+}
+
+#calculadora #visor-div #visor {
+	box-sizing: border-box;
 	text-align: right;
+	font-size: 32px;
+	padding: 10px;
 }
 
 #calculadora #teclado {
-	height: 330px;
+	height: 360px;
 	width: 320px;
 	margin: 0 auto;
 }
@@ -59,6 +64,7 @@
 #calculadora #teclado #numeros {
 	float: left;
 	display: flex;
+	flex-direction: row-reverse;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 236px;
@@ -86,10 +92,15 @@
 }
 
 #calculadora #teclado #funcoes {
-	height: 50px;
+	height: 80px;
 }
 
 #calculadora #teclado .func-tecla {
+	margin-bottom: 5px;
 	width: 50px;
 	height: 35px;
+}
+
+#calculadora #teclado .func-tecla img {
+	width: 20px
 }

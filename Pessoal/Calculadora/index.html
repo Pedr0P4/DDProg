@@ -9,38 +9,44 @@
 	<body>
 
 		<div id="calculadora">
-			<div id="visor">
-				<input type="text" class="vsr-estilo" name="visor" disabled>	
+			<div id="visor-div">
+				<input type="text" class="vsr-estilo" id="visor" name="visor" disabled>	
 			</div>
 			<div id="teclado">
 				<div id="funcoes">
-					<button type="button" class="func-tecla tcl-estilo">M+</button>
+					<button type="button" class="func-tecla tcl-estilo" onclick="digitar()">M+</button>
 					<button type="button" class="func-tecla tcl-estilo">M-</button>
 					<button type="button" class="func-tecla tcl-estilo">MR</button>
 					<button type="button" class="func-tecla tcl-estilo">MC</button>
 					<button type="button" class="func-tecla tcl-estilo">CE</button>
-					<button type="button" class="func-tecla tcl-estilo">C</button>
+					<button type="button" class="func-tecla tcl-estilo" onclick="clearBt()">C</button>
+					<button type="button" class="func-tecla tcl-estilo" onclick="openCloseBracket()">( )</button>
+					<button type="button" class="func-tecla tcl-estilo">,</button>
+					<button type="button" class="func-tecla tcl-estilo">|x|</button>
+					<button type="button" class="func-tecla tcl-estilo">&Sqrt;</button>
+					<button type="button" class="func-tecla tcl-estilo">mod</button>
+					<button type="button" class="func-tecla tcl-estilo" onclick="apagar()"><img src="images/apagar.png" alt=""></button>
 				</div>
 				<div id="principal">
 					<div id="numeros">
-						<button type="button" class="tecla tcl-estilo">9</button>
-						<button type="button" class="tecla tcl-estilo">8</button>
-						<button type="button" class="tecla tcl-estilo">7</button>
-						<button type="button" class="tecla tcl-estilo">6</button>
-						<button type="button" class="tecla tcl-estilo">5</button>
-						<button type="button" class="tecla tcl-estilo">4</button>
-						<button type="button" class="tecla tcl-estilo">3</button>
-						<button type="button" class="tecla tcl-estilo">2</button>
-						<button type="button" class="tecla tcl-estilo">1</button>
-						<button type="button" class="tecla tcl-estilo">+/-</button>
-						<button type="button" class="tecla tcl-estilo">0</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(9)">9</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(8)">8</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(7)">7</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(6)">6</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(5)">5</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(4)">4</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(3)">3</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(2)">2</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(1)">1</button>
 						<button type="button" class="tecla tcl-estilo">=</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitar(0)">0</button>
+						<button type="button" class="tecla tcl-estilo" onclick="invertSignal()">+/-</button>	
 					</div>
 					<div id="operacoes">
-						<button type="button" class="tecla tcl-estilo">/</button>
-						<button type="button" class="tecla tcl-estilo">x</button>
-						<button type="button" class="tecla tcl-estilo">-</button>
-						<button type="button" class="tecla tcl-estilo">+</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitarOperador('/')">/</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitarOperador('x')">x</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitarOperador('-')">-</button>
+						<button type="button" class="tecla tcl-estilo" onclick="digitarOperador('+')">+</button>
 					</div>
 				</div>
 			</div>
