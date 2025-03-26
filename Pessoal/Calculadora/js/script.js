@@ -2,6 +2,7 @@ let visor = document.getElementById("visor");
 let conteudo_visor = visor.value;
 
 let canOperate = false;
+let canDot = true;
 
 let bracketsOpen = 0;
 
@@ -33,8 +34,12 @@ function digitar(digito) {
 
 function digitarOperador(operador) {
 	if(canOperate){
+		if(visor.value[visor.value.length-1] === ","){
+			visor.value += "0";
+		}
 		visor.value += ` ${operador} `;
 		canOperate = false;
+		canDot = true;
 	}	
 }
 
@@ -64,8 +69,6 @@ function invertSignal() {
 }
 
 function openCloseBracket() {
-	if(visor.value.trim() == "") return;
-
 	if(!canOperate){
 		visor.value += "(";
 		bracketsOpen++;
@@ -75,13 +78,31 @@ function openCloseBracket() {
 	}
 }
 
+function dot() {
+	if(visor.value.trim() === "") return;
+
+	if(canDot && canOperate){
+		visor.value += ",";
+		canDot = false;
+	}
+}
+
+function sqrtBt() {
+	if(!canOperate){
+		visor.value += "Sqrt(";
+		bracketsOpen++;
+	}
+}
+
 function apagar() {
 	let valor = visor.value;
 	if(valor[valor.length-1] === " "){
 		visor.value = valor.slice(0, -3);
 		canOperate = true;
-	}
-	else{
+	}else if(valor[valor.length-1] === "(" && valor[valor.length-2] === "t"){
+		visor.value = valor.slice(0, -5);
+		bracketsOpen--;
+	}else{
 		if(valor[valor.length-1] === "(") bracketsOpen--;
 		else if(valor[valor.length-1] === ")") bracketsOpen++;
 		visor.value = valor.slice(0, -1);	
