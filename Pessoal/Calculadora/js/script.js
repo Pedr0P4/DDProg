@@ -33,6 +33,8 @@ function digitar(digito) {
 }
 
 function digitarOperador(operador) {
+	if(visor.value.trim() === "") return;
+
 	if(canOperate){
 		if(visor.value[visor.value.length-1] === ","){
 			visor.value += "0";
@@ -94,8 +96,19 @@ function sqrtBt() {
 	}
 }
 
+function clearBt() {
+	visor.value = "";
+	bracketsOpen = 0;
+	canOperate = false;
+}
+
 function apagar() {
 	let valor = visor.value;
+	if(valor === "Infinity" || valor === "undefined" || valor === "NaN"){
+		visor.value = "";
+		return;
+	}
+
 	if(valor[valor.length-1] === " "){
 		visor.value = valor.slice(0, -3);
 		canOperate = true;
@@ -111,8 +124,15 @@ function apagar() {
 	if(visor.value[visor.value.length-1] === " ") canOperate = false;
 }
 
-function clearBt() {
-	visor.value = "";
-	bracketsOpen = 0;
-	canOperate = false;
+function result(){
+	let valor = visor.value;
+	if(valor.trim() === "") return;
+
+	valor = valor.replace(",", ".");
+	valor = valor.replace("x", "*");
+	valor = valor.replace("mod", "%");
+	valor = valor.replace("Sqrt(", "Math.sqrt(");
+	console.log(valor);
+
+	visor.value = eval(valor);
 }
