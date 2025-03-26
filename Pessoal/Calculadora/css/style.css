@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: space-around;
 	width: 360px;
-	height: 500px;
+	height: 475px;
 	background-color: gray;
 	margin: auto;
 	border-radius: 15px;
@@ -12,7 +12,7 @@
 #calculadora #visor-div {
 	margin: 0 auto;
 	width: 320px;
-	height: 65px;
+	height: 80px;
 }
 
 #calculadora #visor-div input {
@@ -36,7 +36,7 @@
 }
 
 #calculadora #teclado {
-	height: 360px;
+	height: 340px;
 	width: 320px;
 	margin: 0 auto;
 }
@@ -59,6 +59,7 @@
 
 #calculadora #teclado #funcoes .tcl-estilo {
 	font-size: 16px;
+	height: 50px;
 }
 
 #calculadora #teclado #numeros {
@@ -92,7 +93,7 @@
 }
 
 #calculadora #teclado #funcoes {
-	height: 80px;
+	height: 60px;
 }
 
 #calculadora #teclado .func-tecla {
