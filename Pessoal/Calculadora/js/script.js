@@ -1,3 +1,7 @@
+// -------------------------
+// --- VARIÁVEIS GLOBAIS ---
+// -------------------------
+
 let visor = document.getElementById("visor");
 let conteudo_visor = visor.value;
 
@@ -5,6 +9,13 @@ let canOperate = false;
 let canDot = true;
 
 let bracketsOpen = 0;
+
+
+
+
+// ---------------------------
+// --- FUNÇÕES UTILITÁRIAS ---
+// ---------------------------
 
 function MidAppend(str, posToAdd, strToAdd) {
 	if(str === undefined || str.trim() === "") return null;
@@ -26,6 +37,13 @@ function MidRemove(str, pos1, pos2) {
 	
 	return pt1 + pt2;
 }
+
+
+
+
+// -------------------------------------------------
+// --- FUNÇÕES DO TECLADO NUMERAL / OPERACIONAL  ---
+// -------------------------------------------------
 
 function digitar(digito) {
 	visor.value += digito;
@@ -69,6 +87,26 @@ function invertSignal() {
 		}
 	}
 }
+
+function result(){
+	let valor = visor.value;
+	if(valor.trim() === "") return;
+
+	valor = valor.replace(",", ".");
+	valor = valor.replace("x", "*");
+	valor = valor.replace("mod", "%");
+	valor = valor.replace("Sqrt(", "Math.sqrt(");
+	console.log(valor);
+
+	visor.value = eval(valor);
+}
+
+
+
+
+// ------------------------------------
+// --- FUNÇÕES DO TECLADO FUNCIONAL ---
+// ------------------------------------
 
 function openCloseBracket() {
 	if(!canOperate){
@@ -122,17 +160,4 @@ function apagar() {
 	}
 
 	if(visor.value[visor.value.length-1] === " ") canOperate = false;
-}
-
-function result(){
-	let valor = visor.value;
-	if(valor.trim() === "") return;
-
-	valor = valor.replace(",", ".");
-	valor = valor.replace("x", "*");
-	valor = valor.replace("mod", "%");
-	valor = valor.replace("Sqrt(", "Math.sqrt(");
-	console.log(valor);
-
-	visor.value = eval(valor);
 }
