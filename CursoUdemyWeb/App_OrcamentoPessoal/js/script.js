@@ -1,8 +1,10 @@
 class Despesa {
 	constructor(ano, mes, dia, tipo, descricao, valor){
+		if(dia.length == 1) this.dia = "0" + dia;
+		else this.dia = dia;
+
 		this.ano = ano;
 		this.mes = mes;
-		this.dia = dia;
 		this.tipo = tipo;
 		this.descricao = descricao;
 		this.valor = valor;
@@ -45,6 +47,8 @@ class Bd {
 		for(let i = 1; i <= id; i++){
 			let despesa = JSON.parse(localStorage.getItem(i));
 			if(despesa === null) continue;
+
+			despesa.id = i;
 			despesas.push(despesa);
 		}
 
@@ -64,7 +68,7 @@ class Bd {
 		}
 
 		if(d.dia != ""){
-			despesasFiltradas = despesasFiltradas.filter(despesa => despesa.dia == d.dia);
+			despesasFiltradas = despesasFiltradas.filter(despesa => parseInt(despesa.dia) == parseInt(d.dia));
 		}
 
 		if(d.tipo != ""){
@@ -79,7 +83,7 @@ class Bd {
 			despesasFiltradas = despesasFiltradas.filter(despesa => despesa.valor == d.valor);
 		}
 
-		console.log(despesasFiltradas);
+		return despesasFiltradas;
 	}
 }
 
@@ -130,11 +134,12 @@ function cadastrarDespesa() {
 	}
 }
 
-function carregarListaDespesas(){
-	let despesas = Array();
-	despesas = bd.recuperarTodosRegistros();
+function carregarListaDespesas(despesas = Array(), filter = false){
+	
+	if(despesas.length == 0 && filter == false) despesas = bd.recuperarTodosRegistros();
 
 	let listaDespesas = document.getElementById("dados");
+	listaDespesas.innerHTML = '';
 	
 	despesas.forEach(function(d) {
 		let linha = listaDespesas.insertRow();
@@ -164,6 +169,18 @@ function carregarListaDespesas(){
 		linha.insertCell(1).innerHTML = d.tipo;
 		linha.insertCell(2).innerHTML = d.descricao;
 		linha.insertCell(3).innerHTML = d.valor;
+
+		//Botão de excluir
+		let btn = document.createElement("button");
+		btn.className = "btn btn-danger";
+		btn.innerHTML = "<i class='fas fa-times'></i>";
+		btn.id = "id_despesa_" + d.id;
+		btn.onclick = function() {
+			id = btn.id.replace("id_despesa_", "");
+			localStorage.removeItem(id);
+			window.location.reload();
+		}
+		linha.insertCell(4).append(btn);
 	});
 }
 
@@ -184,7 +201,6 @@ function pesquisarDespesas(){
 		valor.value
 	);
 
-	console.log(despesa);
-
-	bd.pesquisar(despesa);	
+	let filtro = bd.pesquisar(despesa);
+	carregarListaDespesas(filtro, true);
 }
